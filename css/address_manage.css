@@ -1,0 +1,160 @@
+
+.address_manage{
+	width:100%;
+	height:100%;
+	position: relative;
+}
+.address_manage .receiver_body{
+	width:100%;
+	height:100%;
+	box-sizing:border-box;
+	padding:45px 0 60px 0; 
+}
+.address_manage .receiver_wrapper{
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+}
+.address_manage .receiver_body_box{
+	width:100%;
+	min-height:101%;
+}
+
+.address_manage  .receiver_head{
+	width:100%;
+	height:45px;
+	background:white;
+	box-sizing: border-box;
+	position:fixed;
+	top:0;
+	left:0;	
+	z-index:102;
+}
+
+.address_manage .receiver_right{
+	position: absolute;
+	top:0;
+	right:0;
+	width:20%;
+}
+.address_manage  .cargo_receiver{
+	width:100%;
+	height:80px;
+	box-sizing: border-box;
+	padding:15px 44px 15px 12px;
+	position:relative;
+	background:white;
+}
+
+.address_manage .info_box{
+	width:100%;
+	height:100%;
+	box-sizing:border-box;
+}
+.address_manage .receiver_info{
+	width:100%;
+	height:30px;
+}
+.address_manage .info_place,.info_name,.info_phone,.info_tel{
+	float:left;
+	font-size:14px;
+	font-weight:bolder;
+	padding-right:10px;
+	line-height:14px;
+}
+.address_manage .default_sel{
+	width:20px;
+	height:30px;
+	background:url(../imgs/icon.png) no-repeat;
+	background-size:500px 667px;
+	background-position:-411px -233px;
+	position:absolute;
+	top:16px;
+	left:7px;
+}
+.address_manage .default_sel img{
+	width:90%;
+	height:90%;
+}
+.address_manage  .receiver_body_box .info_default{
+	display: inline-block;
+}
+.address_manage .receiver_body_box li:first-child .default_sel{
+	background-position:-378px -233px;
+}
+.address_manage .info_default{
+	font-size:12px;
+	width:40px;
+	height:16px;
+	background:red;
+	text-align:center;
+	line-height:16px;
+	color:white;
+	transform: scale(0.8);
+}
+.address_manage .receiver_address{
+	font-size:12px;
+	height:32px;
+	color:#676767;
+	overflow: hidden;
+	line-height:16px;
+	display: -webkit-box;
+	text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.address_manage  .cargo_receiver_sel{
+	width:13px;
+	height:40px;
+	line-height:40px;
+	text-align:right;
+	position:absolute;
+	top:20px;
+	right:12px;
+}
+.address_manage .receiver_foot{
+	position:fixed;
+	bottom:0;
+	left:0;
+	width:100%;
+	height:50px;
+	box-sizing:border-box;
+	padding:0 20px 10px 20px;
+}
+.address_manage .new_address{
+	display: block;
+	width:100%;
+	font-size:16px;
+	height:40px;
+	font-size:16px;
+	text-align:center;
+	background:#f52f2c;
+	line-height: 40px;
+	color:white;
+	border-radius:3px;
+}
+.address_manage .new_icon{
+	display: inline-block;
+	padding-right:10px;
+	height:20px;
+	width:20px;
+	position: relative;
+	top:5px;
+	background:url(../imgs/icon.png) -475px -231px no-repeat;
+	background-size:500px 667px;
+	
+}
+.address_manage .icon-more{
+	color:#cfcfcf;
+}
+
+.address_manage #receiver_li{
+	display: none;
+}
+.address_manage .icon{
+	width: 80px;
+	background:url(../imgs/icon.png) -223px -589px no-repeat;
+	background-size: 500px 667px;
+	position: relative;
+    left: 5px;
+}

@@ -1,0 +1,143 @@
+<div class="look_box">
+	<div class="look_head ab">
+		<div class="look_back m_l" ng-click="myBack()">
+			<i class="iconfont icon-back"></i>
+		</div>
+		<div class="look_title m_m">订单详情</div>
+	</div>
+	<div class="look_body">
+		<div class="look_wrapper">
+			<div class="look_body_box">
+				<ul>
+					<li class="order_number"><div class="order_number_box ab">订单号: {{exams.billno}} <span class="status">{{exams.statename}}</span></div></li>
+					<li class="address ab bt">
+						<div class="location"></div>
+						<div class="up"><span class="cost_center">{{exams.receive.organizename}}</span><span class="name">{{exams.receive.receivername}}</span><span class="number">{{exams.receive.receivermobile}}</span></div>
+						<div class="down"><span class="d">{{exams.receive.fulladdress}}</span></div>
+					</li>
+					<li class="exam bt ab" ng-show="exams.bpms.length!=0">
+						<div class="title ab"><p class="fl_l">审批流程</p><p class="change fl_r"><span class="txt">显示全部</span><span class="arrow"></span></p></div>
+						<div class="progress" style="display: none;">
+							<ul>
+								<li class="clearfix" ng-repeat="item in exams.bpms">
+									<div class="nth fl_l"><span>{{$index+1}}</span></div>
+									<ul class="r">
+										<li class="type">{{item.reason}}</li>
+										<li>
+											<ul class="ab">
+												<li class="advice"><span class="done">{{item.statename}}</span></li>
+												<li class="approver">{{item.username}}</li>
+												<li class="time">{{item.step}}</li>
+												<li class="mar_b"></li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="shop_list ab bt shop_list1" ng-repeat="package in exams.packages">
+						<div class="think ab" stockno="" package_index="0">
+							<div class="truck"></div>
+							<div class="up clearfix"><span class=" fl_l distribution">{{package.logistics[0].actiondesc}}</span><i class="iconfont icon-more fl_r"></i></div>
+							<div class="down"><span class="day">{{package.logistics[0].actiontime}}</span></div>
+						</div>
+						<ul class="list_ul">
+							<li class="list_li" ng-repeat="item in package.items">
+								<div class="shop_url bl ar"><div class="ab bt"><img ng-src="{{item.smallurl}}" alt="" itemid="{{item.itemid}}" eid="{{item.eid}}" ng-click="go_detail($event)" onerror="this.src='imgs/default2.jpg'"/></div></div>
+								<div class="para">
+									<div class="shop_title"  itemid="{{item.itemid}}" eid="{{item.eid}}" ng-click="go_detail($event)">{{item.itemname}}</div>
+									<div class="shop_model"><span class="count">数量:{{item.orderqty}}</span><span class="model">型号:{{item.sizename}}</span><span>颜色:{{item.colorname}}</span></div>
+									<div class="shop_price">¥{{item.price}}</div>
+									<div class="add" itemid="{{item.itemid}}" eid="{{item.eid}}" orderqty="{{item.orderqty}}" price="{{item.price}}" ng-click="add($event)"></div>
+								</div>
+								<div class="space ab bt"></div>
+							</li>
+						</ul>
+					</li>
+					<li class="shop_list ab bt shop_list2" ng-repeat="package in exams.packages">
+						<div class="package_title" ><div class="title_box ab">包裹{{$index+1}}(包裹号: {{package.billno}})</div></div>
+						<div class="think ab" stockno="" package_index="{{$index}}">
+							<div class="truck"></div>
+							<div class="up clearfix"><span class=" fl_l distribution"><span class="package_count"></span>{{package.logistics[0].actiondesc}}</span><i class="iconfont icon-more fl_r"></i></div>
+							<div class="down"><span class="day">{{package.logistics[0].actiontime}}</span></div>
+						</div>
+						<ul class="list_ul">
+							<li class="list_li" ng-repeat="item in package.items">
+								<div class="shop_url bl ar"><div class="ab bt"><img ng-src="{{item.smallurl}}" alt="" itemid="{{item.itemid}}" eid="{{item.eid}}" ng-click="go_detail($event)" onerror="this.src='imgs/default2.jpg'"/></div></div>
+								<div class="para">
+									<div class="shop_title"  itemid="{{item.itemid}}" eid="{{item.eid}}" ng-click="go_detail($event)">{{item.itemname}}</div>
+									<div class="shop_model"><span class="count">数量:{{item.orderqty}}</span><span class="model">型号:{{item.sizename}}</span><span>颜色:{{item.colorname}}</span></div>
+									<div class="shop_price">¥{{item.price}}</div>
+									<div class="add" itemid="{{item.itemid}}" eid="{{item.eid}}" orderqty="{{item.orderqty}}" price="{{item.price}}" ng-click="add($event)"></div>
+								</div>
+								<div class="space ab bt"></div>
+							</li>
+						</ul>
+					</li>
+					<li class="pay_mode_li">
+						<div class="pay_mode_li_box ab">
+						支付方式<span class="pay_mode">{{exams.paymodename}}</span>
+						</div>
+					</li>
+					<li class="carry_info">
+						配送信息<span class="day">{{exams.shipdate}} {{exams.shiptime}}</span><span class="carry_mode">{{exams.distributename}}</span>
+					</li>
+					<li class="receipt_info">
+						发票信息<span class="add_receipt"></span>
+					</li>
+					<li class="fold_li fold_box1">
+						<div class="unit_name">单位名称: <span class="unit_name_b">{{exams.invoice.invoicecompany}}</span></div>
+						<div class="fold" ng-click = "change_fold()"></div>
+						<ul ng-show="f_fold">
+							<li>纳税人识别码: <span class="code_b">{{exams.invoice.invoicetax}}</span></li>
+							<li>注册地址: <span class="address_b">{{exams.invoice.invoiceaddress}}</span></li>
+							<li>注册电话: <span class="number_b">{{exams.invoice.invoicetel}}</span></li>
+							<li>开户银行: <span class="bank_b">{{exams.invoice.invoicebank}}</span></li>
+							<li>银行账户: <span class="acount_b">{{exams.invoice.invoiceaccount}}</span></li>
+						</ul>
+					</li>
+					<li class="fold_li fold_box2">
+						<div class="unit_name">发票抬头: <span class="unit_name_b">{{exams.invoice.invoicecompany}}</span></div>
+						<div class="unit_name">纳税人识别码: <span class="unit_name_b">{{exams.invoice.invoicetax}}</span></div>
+					</li>
+					<li class="fold_li fold_box3">
+					</li>
+					<li>
+						<div class="unit_order"><div class="unit_order_box ab">贵司订单: {{exams.pono}}</div></div>
+						<div class="point"><span class="point_span">备注:</span>{{exams.msg}}</div>
+					</li>
+					<li class="shop_cost">
+						<ul class="ab">
+							<li>商品金额<span class="shop_number">￥{{exams.totalfee}}</span></li>
+							<li>+运费<span class="fare">￥{{exams.postfee}}</span></li>
+							<li>+服务费<span class="serve">￥{{exams.servicefee}}</span></li>
+						</ul>
+					</li>
+					<li class="real_money_box">
+						<div class="rel_money">实付款: <span class="money_number">￥{{lastFee}}</span>
+						</div>
+					</li>
+					<li class="order_time_box">
+						<div class="order_time"><span class="day">下单时间: {{exams.logisticss[0].actiontime}}</span></div>
+					</li>
+				</ul>
+				<div class="some_function">
+					<ul class="some_function_ul">
+						<li class="again_buy" orderno="{{exams.orderno}}" billno="{{exams.billno}}"><a href="">再次购买</a></li>
+						<li class="confirm_receipt" orderno="{{exams.orderno}}" billno="{{exams.billno}}"><a href="">确定收货</a></li>
+						<li class="again_apply" orderno="{{exams.orderno}}" billno="{{exams.billno}}"><a href="">再次申请</a></li>
+						<li class="apply_service" orderno="{{exams.orderno}}" billno="{{exams.billno}}"><a href="">申请售后</a></li>
+						<li class="cancel_order"  orderno="{{exams.orderno}}" billno="{{exams.billno}}"><a href="">取消订单</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<prompt></prompt>
+	<div class="cart_prompt prompt2" style="display: none;">
+	  <div class="pic"><img src="imgs/detail/cart_success.png"></div>
+	  <div class="txt">加入购物车成功</div>
+	</div>
+	<confirm></confirm>
+</div>

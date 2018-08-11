@@ -1,0 +1,28 @@
+<div class="r_phone">
+		<div class="phone_head ab">
+			<div class="phone_left m_l" ng-click="cancel()"><i class="iconfont icon-back"></i></div>
+			<div class="phone_title m_m">修改移动电话</div>
+			<div class="phone_right m_r"></div>
+		</div>
+		<div class="phone_body">
+			<div class="phone_wrapper">
+				<div class="phone_body_box">
+					<div class="space2"></div>
+					<div class="x_phone_box">
+						<div class="newPhoneTitle">新手机号</div>
+						<input type="text" class="x_phone" placeholder="请填写手机号"/>
+						<div class="empty" ng-click="clear_phone()"></div>
+					</div>
+					<div class="space2"></div>
+					<div class="identifyCode_box">
+					<div class="codeInput_box ar">
+					<div class="codeTitle">验证码</div>
+					<input type="text" placeholder="输入手机验证码" class="codeInput"/>
+					</div>
+					<div class="getCode" ng-click="getCode()">获取验证码</div>
+				</div>
+				<div class="next_box"><div class="next" ng-click="newPhone()">确定</div></div>
+				</div>
+			</div>
+		</div>
+	</div>

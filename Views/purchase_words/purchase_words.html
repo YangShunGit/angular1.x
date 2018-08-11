@@ -1,0 +1,45 @@
+<div class="words">
+	<div class="words_head ab">
+		<div class="words_left m_l" ng-click="myBack()"><i class="iconfont icon-back"></i></div>
+		<div class="words_title m_m">采购留言</div>
+		<div class="words_right m_r" ng-click="change_nav()"><i class="iconfont icon-shenglvehao"></i></div>
+	</div>
+	<ysj></ysj>
+	<div class="words_body">
+		<div class="words_wrapper">
+			<div class="words_body_box">
+				<div class="fill_require">
+					<div class="count">{{a.length}}/1000</div>
+					<p>请您填写采购需求，专业客户经理将在第一时间与您联系。</p>
+					<div class="fill_box">
+						<div class="lrl bgr-left bgr-right">
+							<div class="tbl bgr-bottom bgr-top">
+						<textarea name=""  ng-change="is_over()" class="fill_area" placeholder="请填写采购需求" ng-model="a" maxlength="1000"></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="space2"></div>
+				<div class="fill_info">
+					<div class="info_head bgr-bottom">请填写您的信息，以方便联系您</div>
+					<ul class="info_ul">
+						<li class="info_li bgr-bottom">
+							<span>联系人:</span>
+							<input type="text"  value="" class="x_name"/><i class="iconfont icon-shanchu-copy" ng-click="clear_name()"></i>
+						</li>
+						<li class="info_li bgr-bottom"><span>联系电话:</span><input type="tel"  value="" class="x_phone"/><i class="iconfont icon-shanchu-copy" ng-click="clear_phone()"></i></li>
+						<li class="info_li bgr-bottom"><span>公司名称:</span><input type="text"  value="" class="x_company"/><i class="iconfont icon-shanchu-copy" ng-click="clear_company()"></i></li>
+						<li class="info_li bgr-bottom" ng-click="sel_place()"><span>所在省份:</span><input type="text" value="{{receiverstatename}}" placeholder="请选择公司所在省份" readonly="true"/><i class="iconfont icon-more"></i></li>
+						
+					</ul>
+				</div>
+				<div class="submit_box"><div class="submit">提交</div></div>
+			</div>
+		</div>
+	</div>
+	<div class="words_foot"></div>
+	<place></place>
+	<prompt></prompt>
+</div>
+
+

@@ -1,0 +1,24 @@
+<div class="search">
+	<div class="search_head">
+		<div class="search_back" ng-click="myBack()"><i class="iconfont icon-back"></i></div>
+		<div class="search_input"><i class="iconfont icon-sousuo"></i><input type="text" placeholder="水笔"/></div>
+		<div class="search_go"><a href="" ui-sref="exam_center">搜索</a></div>
+	</div>
+	<div class="search_body">
+		<div class="search_wrapper">
+			<div class="search_body_box">
+				<div class="search_space"></div>
+				<div class="history_search">
+					<div class="history_title">历史搜素</div>
+					<div class="history_list">
+						<div class="list_li" ng-repeat="items in historyArr" ng-click="order_para($event)">{{items}}</div>
+					</div>
+				</div>
+				<div class="clear_search"> <i class="iconfont icon-p-delet"></i>清空历史搜索</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+

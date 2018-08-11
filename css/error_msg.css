@@ -1,0 +1,133 @@
+.error_msg{
+	width:100%;
+	height:100%;
+	position: relative;
+}
+.error_msg .error_mask{
+	width:100%;
+	height:100%;
+	background:rgba(0,0,0,0.5);
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:102;
+}
+.error_msg .error_msg_body{
+	width: 80%;
+    background: white;
+    height:auto ;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 33%;
+    margin: auto;
+    border-radius: 5px;
+    box-sizing: border-box;
+    z-index: 9999;
+}
+.error_msg .error_msg_img{
+	width:70px;
+	height:80px;
+	background:url(../imgs/icon.png) -310px -511px no-repeat;
+	background-size:500px 667px;
+	margin:0 auto;
+}
+.error_msg .error_msg_img img{
+	width:80px;
+	height:80px;
+}
+.error_msg .error_msg_title{
+	width:100%;
+	font-size:18px;
+	height:60px;
+	line-height:65px;
+	text-align:center;
+}
+.error_msg .error_msg_cancel{
+	width: 100%;
+	height:40px;
+	line-height:40px;
+	text-align:center;
+}
+.error_msg .error_massage{
+	width:100%;
+	box-sizing: border-box;
+	padding:0 20px 10px 20px;
+	height:auto;
+	line-height:30px;
+	text-align:center;
+}
+.login{
+	width:100%;
+	height:100%;
+	background:white;
+}
+.login input::-webkit-input-placeholder{
+	font-size: 15px;
+}
+.login .login_head{
+	width:100%;
+	height:45px;
+}
+
+.login .login_form{
+	width:100%;
+	box-sizing:border-box;
+	padding:50px 30px 20px 30px;
+}
+.login .user_id,.login .user_password{
+	width:100%;
+	height:50px;
+	border:none;
+	font-size:15px;
+	line-height:50px;
+	color:#3c454c;
+	position: relative;
+	padding:16px 0 16px 50px;
+	box-sizing:border-box;
+}
+.login .user_id span,.login .user_password span{
+	width:50px;
+	height:18px;
+	line-height:18px;
+	display: block;
+	position: absolute;
+	top:16px;
+	left:0;
+}
+.login input{
+	display: block;
+	width:100%;
+	font-size: 15px;
+	height:18px;
+	line-height: 18px;
+	border:none;
+	outline:none;
+}
+
+.login .btn_login{
+	width:100%;
+	height:40px;
+	margin-top:30px;
+	background:#eeeeee;
+	color:#cecece;
+	border-radius:3px;
+	text-indent:0;
+	font-size: 15px;
+}
+.login .other{
+	width:100%;
+	font-size:15px;
+	height:15px;
+	box-sizing: border-box;
+	padding:0 30px;
+}
+.login .vip{
+	color:#f52f2c;
+	float: left;
+}
+.login .forget_password{
+	color: #666;
+	float: right;
+}
+

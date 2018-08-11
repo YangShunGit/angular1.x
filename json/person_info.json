@@ -1,0 +1,57 @@
+{
+	"person":{
+		"address_info":[{
+			"address_sel":false,
+			"figure":"011",
+			"cost_center":"上海田子坊",
+			"receiver":"张三",
+			"phone_number":"17688889295",
+			"tel":"",
+			"place":"上海市徐汇区城区",
+			"detail_address":"宛平南路256号",
+			"postalcode":"",
+			"default_address":false
+		},{
+			"address_sel":false,
+			"figure":"012",
+			"cost_center":"上海田子坊",
+			"receiver":"李思",
+			"phone_number":"17688889295",
+			"tel":"",
+			"place":"上海市徐汇区",
+			"detail_address":"凯旋路2550号2楼204",
+			"postalcode":"",
+			"default_address":true
+		}],
+		"person_info":{
+			"login_name":"test01",
+			"username":"name01",
+			"email":"156564565@163.com",
+			"tel":"0215-487464154",
+			"phone_number":"15585895698"
+		},
+		"default_info":{
+			"pay_mode":"合约结算",
+			"carry_info":{
+				"carry_mode":"合约送货时间",
+				"carry_date":"8月17日[周四]",
+				"carry_time":"09:00-12:00"
+			},
+			"receipt_info":"无需发票",
+			"shop_price":"",
+			"carry_cost":5.00,
+			"service_cost":5.00,
+			"true_price":"",
+			"receipt_info_detail":{
+				"receipt_unit":"",
+				"receipt_code":"",
+			    "receipt_name": "",
+				"receipt_code_add": "",
+				"receipt_address": "",
+				"receipt_number": "",
+				"receipt_bank": "",
+				"receipt_account": ""
+			}
+		}
+	}
+}

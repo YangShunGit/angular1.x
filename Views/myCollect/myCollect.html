@@ -1,0 +1,73 @@
+<div class="collect">
+	<div class="collect_head ab">
+		<div class="collect_left m_l" ng-click="myBack()"><i class="iconfont icon-back"></i></div>
+		<div class="collect_title m_m">我的收藏</div>
+		<div class="collect_right m_r" ng-click="collect_edit()" ng-show="edit_status">编辑</div>
+		<div class="collect_right m_r" ng-click="collect_edit()" ng-show="!edit_status">完成</div>
+	</div>
+	<!--商品筛选-->
+	<div class="shop_sort ab">
+		<ul>
+			<li class="default_sort_li sort_li">
+				<span>全部</span>
+			</li>
+			<li class="price_sort_li sort_li">
+				<span class="gray"><span class="groupName">筛选</span><p class="saixuan"></p></span>
+			</li>
+		</ul>
+	</div>
+	<div class="collect_filter" ng-click="click_draw($event)">
+		<div class="filter_content">
+			<ul class="filter_list">
+				<li ng-repeat="group in favoritgroup" groupid="{{group.groupid}}" groupname="{{group.groupname}}" data-index="{{$index}}">{{group.groupname}}(<span class="all_shop_count">{{group.totalqty}}</span>)</li>
+			</ul>
+		</div>
+	</div>
+	<div class="collect_body">
+		<div class="collect_wrapper">
+			<div class="collect_body_box">
+				<!--商品列表-->
+				<ul class="shop_list_ul">
+					<li class="list_li" ng-repeat="item in goods" data-id="{{item.goods_id}}">
+						<section ng-click="change_edit($event)" fids="{{item.fid}}" class="edit_nor"  id="edit_cart"></section>
+						<div class="li_pic bl ar">
+							<div class="bt ab" style="height:100px;width:100px;"><img ng-src="{{item.smallurl}}" alt="" ng-click="getData($event)"  eid="{{item.eid}}" itemid="{{item.itemid}}" colorid="{{item.colorid}}" sizeid="{{item.sizeid}}" onerror="this.src='imgs/default2.jpg'"/></div>
+						</div>
+						<div class="shop_info">
+							<div class="info_box ab">
+								<div class="li_title"  ng-click="getData($event)" itemid="{{item.itemid}}" eid="{{item.eid}}" colorid="{{item.colorid}}" sizeid="{{item.sizeid}}">{{item.itemname}}</div>
+								<div class="li_price"><span class="small">¥</span>{{item.itprice.big_price}}.<span class="small">{{item.itprice.small_price}}</span></div>
+								<div class="li_cart" eid="{{item.eid}}" price="{{item.price}}" itemid="{{item.itemid}}"></div>
+								<div class="li_add">
+									<div class="del"><i class="iconfont icon-del" ng-click="del($event)"></i>
+									</div>
+									<div class="count"><input type="tel" value="1"/></div>
+									<div class="add"><i class="iconfont icon-add" ng-click="add($event)" ></i></div>
+
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<loadingmore></loadingmore>
+				<nomore></nomore>
+				<div class="empty" style="display: none;">
+					<div class="icon"></div>
+					<p>您还没有收藏任何商品！</p>
+					<div class="tohome" ui-sref="home">去首页看看</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="collect_foot" ng-show="!edit_judge">
+		<div class="foot_left1">
+			<p class="all_edit_nor"></p>
+			全选
+		</div>
+		<ul class="foot_right2">
+			<li class="collect">取消收藏</li>
+		</ul>
+	</div>
+	<prompt></prompt>
+	<confirm></confirm>
+</div>

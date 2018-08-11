@@ -1,0 +1,56 @@
+<div class="addressPage">
+	<div class="address_head ab">
+		<div class="address_back m_l" ng-click="myBack()">
+			<i class="iconfont icon-back"></i>
+		</div>
+		<div class="address_title m_m">添加收货地址</div>
+	</div>
+	<div class="address_body">
+		<div class="address_body_box">
+			<div style="min-height:101%">
+			<ul class="address_ul">
+				<li ng-click="organize_sel()" class="organize_sel">
+					<span>成本中心:</span>
+					<p class="cost_center">{{all_address.organizename}}</p>
+					<i class="iconfont icon-more"></i>
+				</li>
+				<li><span>收货人:</span><input type="text" class="cargo_people" placeholder="" value="{{all_address.receivername}}"/></li>
+				<li><span>手机号码:</span><input type="text" class="phone_number" placeholder="" value="{{all_address.receivermobile}}"/></li>
+				<li><span>固话:</span><input type="text" class="fixed_number" placeholder="" value="{{all_address.receivertel}}"/></li>
+				
+				<li class="three_address"  ng-click="store_address()">
+					<span class="location">所在地区:</span>
+					<p class="location_now">{{all_address.receiverstatename}}{{all_address.receivercityname}}{{all_address.receiverdistrictname}}</p>
+					<i class="iconfont icon-more"></i>
+				</li>
+				<li><span>详细地址:</span><input type="text" class="detail_address" placeholder="" value="{{all_address.receiveraddress}}"/></li>
+				<li><span>邮政编码:</span><input type="text" class="postalcode" placeholder="" value="{{all_address.zip}}"/></li>	
+				<li>
+					<div class="default_set">
+						<div class="up">设为默认地址</div>
+						<div class="down">注：每次下单时会使用该地址</div>
+						<div class="switch" ng-click="change_check()"><input type="checkbox" class="js-switch"/></div>
+					</div>
+				</li>
+			</ul>
+			<div class="address_foot">
+				<div class="save" ng-click="add()">
+					<div class="save">
+						保存
+					</div>
+				</div>
+			</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="prompt" style="display: none;">
+		<div class="pic"><img src="imgs/order/exclamation.png"></div>
+		<div class="txt"></div>
+	</div>
+	<loading></loading>
+	<place></place>
+	<costcenter></costcenter>
+	<mask></mask>
+	<loading></loading>
+</div>

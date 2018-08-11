@@ -1,0 +1,142 @@
+<div class="exam">
+	<div class="exam_head ab">
+		<div class="exam_left m_l" ui-sref="mine"><i class="iconfont icon-back"></i></div>
+		<div class="exam_title m_m">审批中心</div>
+		<div class="exam_right">
+			<searchcomponent></searchcomponent>
+		</div>
+	</div>
+	<mask></mask>
+	<ul class="exam_title_nav">
+		<li><span class="exam_title_li order" ng-click="border($event)">订单审批</span></li>
+		<li><span class="exam_title_li return" ng-click="border($event)">退货审批</span></li>
+		<li><span class="exam_title_li audited">已审订单</span></li>
+	</ul>
+	<div class="exam_body">
+		<div class="exam_wrapper">
+			<div class="exam_body_box">
+				<ul class="exam_order_list order2">
+					<li id="exam_list_li">
+						<section class="edit_nor" ng-click="change_edit($event)"></section>
+						<div class="exam_list_head clearfix bt"><span class="o">订单号：</span><span class="order_number"></span><span class="order_status"></span></div>
+						<div class="shop_box">
+							<div class="shop_pic"><img data-original=""  class="lazy" src='imgs/default2.jpg'/></div>
+							<div class="shop_title"><div></div></div>
+						</div>
+						<div class="shop_box1">
+							<div class="swiper-container">
+								<div class="swiper-wrapper">
+									<div id="swiper-slide"><img data-original="" src="imgs/default2.jpg" class="lazy" /></div>
+								</div>
+							</div>
+						</div>
+						<div class="exam_list_foot ab">
+							<span class="float_right_box">
+								共<span class="all_count">7</span>件商品&nbsp;&nbsp;&nbsp;实付款:￥  <span class="true_pay">199.00</span>
+							</span>
+						</div>
+						<div class="exam_fn ab">
+							<ul>
+								<li class="fl_l revise" ng-click="revise($event)">修改</li>
+								<li class="fl_l refuse" ng-click="refuse($event)">拒绝</li>
+								<li class="fl_l agree" ng-click="agree($event)">同意</li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+				
+				<ul class="exam_order_list return2" style="display: none;">
+					<li id="exam_list_li">
+						<em class="edit_nor" ng-click="change_edit($event)"></em>
+						<div class="exam_list_head clearfix bt"><span class="o">退单号：</span><span class="order_number"></span><span class="order_status"></span></div>
+						<div class="shop_box">
+							<div class="shop_pic"><img data-original=""  class="lazy" src="imgs/default2.jpg" /></div>
+							<div class="shop_title"><div></div></div>
+						</div>
+						<div class="shop_box1">
+							<div class="swiper-container">
+								<div class="swiper-wrapper">
+									<div id="swiper-slide"><img data-original=""  class="lazy" src="imgs/default2.jpg" /></div>
+								</div>
+							</div>
+						</div>
+						<div class="exam_list_foot ab">
+							<span class="float_right_box">
+								共<span class="all_count">7</span>件商品&nbsp;&nbsp;&nbsp;实付款:￥  <span class="true_pay">199.00</span>
+							</span>
+						</div>
+						<div class="exam_fn ab">
+							<ul>
+								
+								<li class="fl_l refuse" ng-click="refuse()">拒绝</li>
+								<li class="fl_l agree" ng-click="agree()">同意</li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+				
+				<ul class="exam_order_list audited2" style="display:none ;">
+					<li id="exam_list_li">
+						<div class="exam_list_head clearfix bt" id="exam_list_head"><span class="o">订单号：</span><span class="order_number"></span><span class="order_status"></span></div>
+						<div class="shop_box">
+							<div class="shop_pic"><img data-original=""  class="lazy" src="imgs/default2.jpg" /></div>
+							<div class="shop_title"><div></div></div>
+						</div>
+						<div class="shop_box1">
+							<div class="swiper-container">
+								<div class="swiper-wrapper">
+									<div id="swiper-slide"><img data-original="" src="imgs/default2.jpg" class="lazy" /></div>
+								</div>
+							</div>
+						</div>
+						<div class="exam_list_foot ab">
+							<span class="float_right_box">
+								共<span class="all_count">7</span>件商品&nbsp;&nbsp;&nbsp;实付款:￥  <span class="true_pay">199.00</span>
+							</span>
+						</div>
+					</li>
+				</ul>
+				<ifempty></ifempty>
+				<loadingmore></loadingmore>
+			</div>
+		</div>
+	</div>
+	<div class="exam_foot_box">
+		<div class="foot_left1">
+			<p class="all_edit_nor" ng-click="all_edit_sel($event)"></p>
+			全选
+		</div>
+		<ul class="foot_right2">
+			<li class="allRefuse">全部拒绝</li>
+			<li class="allAgree">全部同意</li>
+		</ul>
+	</div>
+	<div class="search">
+		<div class="search_head ab">
+			<div class="search_back" ng-click="cancel()"><i class="iconfont icon-back"></i></div>
+			<div class="search_input">
+				<div class="search_type_a">
+				</div>
+				<input type="text" class="search_it" placeholder="商品名称/商品编号/订单号"/>
+				<p class="clear_input"></p>
+			</div>
+			<div class="search_go" ng-click="sou()"><a href="">搜索</a></div>
+		</div>
+	</div>
+	<div class="refuse_mask"></div>
+	<div class="refuse_window">
+		<div class="cc"></div>
+		<div class="refuse_title">拒绝理由</div>
+		<div class="refuse_box1 ab bt">
+			<div class="refuse_box2 ar bl">
+				<textarea name="" rows="" cols="" class="refuse_area" value="123" placeholder="填写拒绝理由"></textarea>
+			</div>
+		</div>
+		<div class="refuse_submit_box">
+			<div class="refuse_submit">拒绝通过</div>
+		</div>
+	</div>
+	<prompt></prompt>
+	<confirm></confirm>
+	<loading></loading>
+</div>

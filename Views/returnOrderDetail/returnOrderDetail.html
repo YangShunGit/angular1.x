@@ -1,0 +1,147 @@
+<div class="page">
+	<div class="hpage ab">
+		<div class="hleft m_l">
+			<a href="" ng-click="myBack()"><i class="iconfont icon-back"></i></a>
+		</div>
+		<div class="htitle m_m">退单详情</div>
+		<div class="hright m_r" ng-click="change_nav()"><i class="iconfont icon-shenglvehao"></i></div>
+	</div>
+	<ysj></ysj>
+	<div class="bpage">
+		<div class="bwrapper">
+			<div class="bbox">
+				<div class="space2"></div>
+				<!--ro(returnOrder)-->
+				<!--_b(_box)-->
+				<div class="roNumber_b ab">
+					<div class="numberHead">退单号:</div>
+					<div class="roNumber">{{returnDetail.billno}}</div>
+					<div class="roTime">{{returnDetail.createtime}}</div>
+				</div>
+				<div class="roProgress_b">
+					<div class="roProgressHead_b">
+						<div class="roProgressHead ab">审批流程</div>
+					</div>
+					<div class="roProgressList">
+						<ul>
+							<li class="clearfix" ng-repeat="item in returnDetail.bpms">
+								<div class="nth fl_l"><span>{{$index+1}}</span></div>
+								<ul class="r">
+									<li class="type">{{item.reason}}</li>
+									<li>
+										<ul class="ab">
+											<li class="advice"><span class="done">{{item.statename}}</span></li>
+											<li class="approver">{{item.username}}</li>
+											<li class="time">{{item.step}}</li>
+											<li class="mar_b"></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+						<!--<ul>
+							<li class="progressCell">
+								<div class="loading"></div>
+								<div class="up">
+									<div class="greenLine lineLeft"></div>
+									<div class="finish"></div>
+									<div class="greenLine lineRight"></div>
+								</div>
+								<div class="down">
+									<div class="progressContent">提交申请</div>
+									<div class="progressDate">2017-08-26</div>
+									<div class="progressTime">09:20:12</div>
+								</div>
+							</li>
+							<li class="progressCell">
+								<div class="loading"></div>
+								<div class="up">
+									<div class="greenLine lineLeft"></div>
+									<div class="finish"></div>
+									<div class="greenLine lineRight"></div>
+								</div>
+								<div class="down">
+									<div class="progressContent">提交申请</div>
+									<div class="progressDate">2017-08-26</div>
+									<div class="progressTime">09:20:12</div>
+								</div>
+							</li>
+							<li class="progressCell">
+								<div class="tips">
+									<span>审核中</span>
+									<div class="trigon"></div>
+								</div>
+								<div class=""></div>
+								<div class="loading"></div>
+								<div class="up">
+									<div class="greenLine lineLeft"></div>
+									<div class="finish"></div>
+									<div class="greenLine lineRight"></div>
+								</div>
+								<div class="down">
+									<div class="progressContent">提交申请</div>
+									<div class="progressDate">2017-08-26</div>
+									<div class="progressTime">09:20:12</div>
+								</div>
+							</li>
+						</ul>-->
+					</div>
+				</div>
+				<div class="space2"></div>
+				<div class="roReason_b">
+					<div class="roReasonHead ab">
+						<p>申请理由</p>
+						<div class="roReasonTitle">{{returnDetail.reason}}</div>
+					</div>
+					<div class="problemDes">
+						<div class="desHead ab">问题描述</div>
+						<div class="desContent">{{returnDetail.memo}}</div>
+					</div>
+				</div>
+				<div class="space2"></div>
+				<div class="roInfo">
+					<div class="roInfoHead ab">
+						退单信息
+					</div>
+					<ul>
+						<li class="ab"><span>服务类型:</span>
+							<div class="serviceType">{{returnDetail.ischangename}}</div>
+						</li>
+						<li class="ab"><span>商品退回:</span>
+							<div class="shopReturn">{{returnDetail.logisticstypename}}</div>
+						</li>
+						<li class="ab"><span>联系人:</span>
+							<div class="person">{{returnDetail.receivername}}</div>
+						</li>
+						<li><span>联系电话:</span>
+							<div class="mobile">{{returnDetail.receivertel}}</div>
+						</li>
+					</ul>
+				</div>
+				<div class="space2"></div>
+				<div class="roShop_list ab bt">
+					<ul class="list_ul">
+						<li class="list_li" ng-repeat="item in returnDetail.detail">
+							<div class="shop_url bl ar">
+								<div class="ab bt"><img ng-src="{{item.littleurl}}" alt="" itemid="{{item.itemid}}" eid="{{item.eid}}" ng-click="go_detail($event)" onerror="this.src='imgs/default2.jpg'" /></div>
+							</div>
+							
+							<div class="para">
+								<div class="para_box ab">
+									<div class="shop_title" itemid="{{item.itemid}}" eid="{{item.eid}}" ng-click="go_detail($event)">{{item.itemname}}</div>
+									<div class="shop_model"><span class="count">数量：{{item.orderqty}}</span><span class="model">型号：{{item.sizename}}</span><span>颜色：{{item.colorname}}</span></div>
+									<div class="shop_price">¥{{item.price}}</div>
+									<div class="add" itemid="{{item.itemid}}" eid="{{item.eid}}" orderqty="{{item.orderqty}}" price="{{item.price}}" ng-click="add($event)"></div>
+								</div>
+							</div>
+							
+						</li>
+					</ul>
+				</div>
+				<div class="space2"></div>
+			</div>
+		</div>
+	</div>
+	<div class="fpage"></div>
+	<prompt></prompt>
+</div>

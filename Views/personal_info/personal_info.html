@@ -1,0 +1,22 @@
+<div class="personal">
+	<div class="personal_head ab">
+		<div class="personal_left m_l" ui-sref="mine"><i class="iconfont icon-back"></i></div>
+		<div class="personal_title m_m">个人信息</div>
+		
+	</div>
+	<div class="personal_body">
+		<div class="personal_wrapper">
+			<div class="personal_body_box">
+				<ul class="personal_ul">
+					<li class="bgr-bottom">登录账户<span class="name">{{userInfo.userno}}</span></li>
+					<li class="bgr-bottom" ng-click="change_username()"><a href="" >用户昵称<i class="iconfont icon-more"></i><span class="username">{{userInfo.usernick}}</span></a></li>
+					<li class="bgr-bottom" ng-click="change_email()"><a href="">邮箱地址<i class="iconfont icon-more"></i><span class="email">{{userInfo.usermail}}</span></a></li>
+					<li class="bgr-bottom" ng-click="change_tel()"><a href="" >办公电话<i class="iconfont icon-more"></i><span class="tel">{{userInfo.usertel}}</span></a></li>
+					<li class="bgr-bottom" ng-click="change_phone()"><a href="" >移动电话<i class="iconfont icon-more"></i><span class="phone">{{userInfo.usermobile}}</span></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+

@@ -1,0 +1,8 @@
+.kac_exclusive img{border: none;}
+.kac_exclusive .fl_l{float: left;}
+.kac_exclusive .fl_r{float: right}
+
+.kac_exclusive .navBar{ height: 45px; line-height: 45px; position: relative; font-size: 17px; color: #232326;}
+
+.kac_exclusive .content{ background: #FFFFFF;padding: 10px 12px 0;box-sizing: border-box; }
+.kac_exclusive .content p{font-size: 15px; line-height: 26px; text-indent: 30px; }

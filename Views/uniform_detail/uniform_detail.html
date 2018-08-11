@@ -1,0 +1,171 @@
+<div class="detail">
+	<div class="detail_box">
+		<!--detail_head-->
+	<div class="detail_head ab">
+		<div class="detail_back"><div ng-click="myBack()"><i class="iconfont icon-back"></i></div></div>
+		<div class="detail_title1" ng-click="title1()">商品
+			<div class="a1"></div>
+		</div>
+		<div class="detail_title2" ng-click="title2()">详情
+			<div class="a2"></div>
+		</div>
+		<div class="detail_nav" ng-click="change_nav()"><i class="iconfont icon-shenglvehao"></i></div>
+	</div>
+	
+	<ysj></ysj>
+	
+	<!--shop_body1-->
+	<div class="detail_body_box">
+			<div class="max_box_wrapper">
+				<div class="max_box">
+					<div class="x_box1">
+						<div class="box1_content">
+							<div class="body1_box">
+								<div class="body1_wrapper">
+									<div class="detail_body">
+										<div class="detail_box">
+											<div class="detail_pic">
+												<img ng-src="{{data.shop_url}}" alt="" />
+											</div>
+											<div class="detail_title">{{data.shop_title}}</div>
+											<div class="detail_price">￥{{data.shop_price}}</div>
+										</div>
+										<div class="detail_format">
+											<div class="sel_or_nor">已选</div>
+											<div class="detail_color">{{data.shop_color}},</div>
+											<div class="detail_size">{{data.shop_size}},</div>
+											<div class="detail_count">{{data.shop_count}}个</div>
+											<div class="format_sel" ng-click="open_para()"></div>
+										</div>
+										<div class="pull_look">
+											<i class="iconfont icon-shang"></i> 上拉查看图文详情
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="body2_box">
+								<div class="body2_wrapper">
+									<div class="detail_body2">
+										<div class="body2_head">
+											<div ng-class='{true:"title_act",false:"title_nor"}[b]' ng-click="content1()" class="body2_title1">商品介绍</div>
+											<div ng-class='{true:"title_act",false:"title_nor"}[!b]' class="body2_title2" ng-click="content2()">规格参数</div>
+										</div>
+										<!--body2_content1-->
+										<div class="body2_content" ng-show="b">
+											<img src="imgs/detail/shop_introduce.jpg" alt="" />
+											<img src="imgs/detail/shop_introduce.jpg" alt="" />
+											<img src="imgs/detail/shop_introduce.jpg" alt="" />
+										</div>
+
+										<!--body2_content2-->
+										<div class="body2_content2" ng-show="!b">
+											<img src="imgs/detail/specification.jpg" alt="" />
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="x_box2">
+						<div class="box2_content">
+							<div class="body2_box">
+								<div class="body3_wrapper">
+									<div class="detail_body3">
+										<div class="body2_head">
+											<div ng-class='{true:"title_act",false:"title_nor"}[b]' ng-click="content1()" class="body2_title1">商品介绍</div>
+											<div ng-class='{true:"title_act",false:"title_nor"}[!b]' class="body2_title2" ng-click="content2()">规格参数</div>
+										</div>
+										<!--body2_content1-->
+										<div class="body2_content" ng-show="b">
+											<img src="imgs/detail/shop_introduce.jpg" alt="" />
+											<img src="imgs/detail/shop_introduce.jpg" alt="" />
+											<img src="imgs/detail/shop_introduce.jpg" alt="" />
+										</div>
+
+										<!--body2_content2-->
+										<div class="body2_content2" ng-show="!b">
+											<img src="imgs/detail/specification.jpg" alt="" />
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+	
+	</div>
+	<div class="parameter">
+	<div class="bg_box"></div>
+	<div class="para_box">
+		<div class="para_head">
+			<div class="para_pic"><img ng-src="{{data.shop_url}}" alt=""/></div>
+			<div class="para_del" ng-click="close_para()"><i class="iconfont icon-chacha"></i></div>
+			<div class="para_price_box ab">
+				<div class="para_price">￥{{data.shop_price}}</div>
+				<div class="para_number">商品编号：Z00001178</div>
+			</div>
+		</div>
+		<div class="para_body">
+			<div class="color">
+				<div class="para para_title1">颜色
+				</div>
+				<ul class="color_ul">
+					<li ng-repeat="item in data.shop_colors">{{item}}</li>
+				</ul>
+				<div class="para para_title2">型号</div>
+				<ul class="model_ul">
+					<li ng-repeat="item in data.shop_models">{{item}}</li>
+				</ul>
+				<div class="para para_title2">
+					数量
+					<div class="del_add">
+						<div class="del" ><i class="iconfont icon-del"></i>
+						</div>
+						<div class="count"><input type="text" value="1"/></div>
+						<div class="add"><i class="iconfont icon-add"></i></div>
+					
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	<div class="para_foot">
+		<div class="to_cart" ng-click="close_para()">回收</div>
+		<div class="to_pay" ng-click="close_para()"><a href="">领用</a></div>
+	</div>
+</div>
+</div>
+<!--detail_foot-->
+<div class="detail_foot">
+		
+	<div class="foot_left">
+		<a href="" class="foot_shoucang" ng-click="to_collect()">
+			<em class="bg_shoucang"></em>
+			<span>收藏</span>
+		</a>
+		<a href="" class="foot_gouwuche" ui-sref="cart" ng-click="to_cart()">
+			<em class="bg_gouwuche"></em>
+			<span>购物车</span>
+			<div class="cart_shop_count">{{cartShopCount}}</div>
+		</a>
+	</div>
+	<div class="foot_right">
+		<a href="" class="add_cart">回收</a>
+		<a href="" class="direct_pay">领用</a>
+	</div>
+	<div class="cart_prompt receive_prompt" style="display: none;">
+	  <div class="pic"><img src="imgs/detail/cart_success.png"></div>
+	  <div class="txt">制服领用成功</div>
+	</div>
+	<div class="cart_prompt recover_prompt" style="display: none;">
+	  <div class="pic"><img src="imgs/detail/cart_success.png"></div>
+	  <div class="txt">制服回收成功</div>
+	</div>
+</div>
+
+
+

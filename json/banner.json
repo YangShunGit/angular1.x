@@ -1,0 +1,45 @@
+{"items": [
+                                    {
+                                        "w": 720,
+                                        "h": 360,
+                                        "material_id": 2525,
+                                        "ad_position_id": 1006,
+                                        "img_url": "imgs/banner/hbanner1.jpg",
+                                        "img_url_webp": "https://res.vmallres.com/pimages//sale/2017-08/20170818210006271.png",
+                                        "img_url_color": "#C8C3BF",
+                                        "action": {
+                                            "type": "url",
+                                            "path": "https://s1.mi.com/pages/819e3d6c1381eac87c17617e5165f38c/index.html?needValidHost=false&client_id=180100031058&masid=17409.0090",
+                                            "log_code": "31waphomegallery001001#rid=6685b539ec370149d9d25f423663242e&t=ad&page=home&act=webview&page_id=26&bid=3000164.1&adp=1006&adm=2525"
+                                        }
+                                    },
+                                    {
+                                        "w": 720,
+                                        "h": 360,
+                                        "material_id": 1842,
+                                        "ad_position_id": 1007,
+                                        "img_url":"imgs/banner/hbanner2.jpg",
+                                        "img_url_webp": "https://res.vmallres.com/pimages//sale/2017-08/20170820232835520.png",
+                                        "img_url_color": "#E9DCCD",
+                                        "action": {
+                                            "type": "product",
+                                            "path": "10000030",
+                                            "log_code": "31waphomegallery002001#rid=eb2a009aa6a50fc7a3769edfd5db93f7&t=ad&page=home&act=product&pid=10000030&page_id=26&bid=3000164.2&adp=1007&adm=1842"
+                                        }
+                                    },
+                                    {
+                                        "w": 720,
+                                        "h": 360,
+                                        "material_id": 2013,
+                                        "ad_position_id": 1005,
+                                        "img_url":"imgs/banner/hbanner3.jpg",
+                                        "img_url_webp": "https://res.vmallres.com/pimages//sale/2017-08/20170818210015825.png",
+                                        "img_url_color": "#DBCEB2",
+                                        "action": {
+                                            "type": "product",
+                                            "path": "10000029",
+                                            "log_code": "31waphomegallery003001#rid=8f7db311840642d0fc31f9f03663e34b&t=ad&page=home&act=product&pid=10000029&page_id=26&bid=3000164.3&adp=1005&adm=2013"
+                                        }
+                                    }
+                                ]
+}

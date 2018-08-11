@@ -1,0 +1,23 @@
+
+/*----无用----*/
+.search{
+	position: absolute;
+	left: 0;
+	top: 0;
+	background:#f1f2f6;
+}
+.search_head{
+	background:white;
+}
+.search .search_head .search_input input{
+	padding-left:30px;
+}
+.search_type_a{
+	width:20px;
+	height:20px;
+	position: absolute;
+    top: 12px;
+    left: 5px;
+	background:url(../imgs/icon.png) -180px -83px no-repeat;
+	background-size:500px 667px;
+}

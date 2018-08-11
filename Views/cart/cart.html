@@ -1,0 +1,133 @@
+<div class="cart_box">
+	
+	<div class="cart">
+	<div class="cart_head ab">
+		<div class="cart_left"></div>
+		<div class="cart_title">购物车</div>
+		<div class="cart_edit" ng-show="foot" ng-click="edit()">编辑</div>
+		<div class="cart_edit" ng-show="!foot" ng-click="edit()">完成</div>
+	</div>
+	<div class="cart_body">
+		<div id="cart" class="mescroll">
+		<div class="cart_wrapper">
+			<div class="cart_body_box">
+				<div class="down_fresh_box" style="display: none;">
+					<span><img src="imgs/loading.gif" alt="" class="down_fresh_gif"/></span>
+					<span class="down_fresh">下拉刷新</span>
+				</div>
+				
+				<div class="space2"></div>
+				<ul class="cart_list_ul">
+					<li class="list_li" ng-repeat="item in goods" eid="{{item.eid}}" itemid="{{item.itemid}}" colorid="{{item.colorid}}" sizeid="{{item.sizeid}}" repeat-finish="ref()">
+						<p  ng-click="change_sel($event)" eid="{{item.eid}}" itemid="{{item.itemid}}" colorid="{{item.colorid}}" sizeid="{{item.sizeid}}" cartid="{{item.cartid}}" data-selected="{{item.selected}}" ng-class="{true:'li_sel',false:'li_nor'}[{{item.selected}}=='1']" ng-show="foot">
+						</p>
+						<section ng-click="change_edit($event)" cartid="{{item.cartid}}" ng-show="!foot" class="edit_nor" data-class="edit_cartid" id="edit_cart"></section>
+						
+						<div class="li_pic bl ar">
+							<div class="bt ab" style="height:90px;width:90px;"><img lazy-src="{{item.middleurl}}" alt="" ng-click="getData($event)"  eid="{{item.eid}}" itemid="{{item.itemid}}" colorid="{{item.colorid}}" sizeid="{{item.sizeid}}" onerror="this.src='imgs/default2.jpg'"/></div>
+						</div>
+						<div class="shop_info ab">
+							
+							<div class="li_title"  ng-click="getData($event)" eid="{{item.eid}}" itemid="{{item.itemid}}" colorid="{{item.colorid}}" sizeid="{{item.sizeid}}">{{item.itemname}}</div>
+							<div class="shop_standard">
+								<span class="shop_color">颜色:{{item.colorname}}</span>
+								<span class="shop_sta">规格:{{item.sizename}}</span>
+								<div class="shop_sign">{{item.goods_type}}</div>
+							</div>
+							
+							
+							<div class="li_price"><span class="small">¥</span>{{item.itprice.big_price}}.<span class="small">{{item.itprice.small_price}}</span></div>
+							<div class="li_add">
+							
+								<div class="del"><i class="iconfont icon-del" ng-click="del($event)" eid="{{item.eid}}" itemid="{{item.itemid}}" colorid="{{item.colorid}}" sizeid="{{item.sizeid}}" price="{{item.price}}" cartid="{{item.cartid}}" orderqty="{{item.orderqty}}" ng-class="{true:'undertint',false:'original'}[{{item.orderqty}}==1]"
+									></i></div>
+								
+								<div class="count_input" ng-click="count_input($event)"><input type="tel" min="1" max="9999" value="{{item.orderqty}}" eid="{{item.eid}}" itemid="{{item.itemid}}" colorid="{{item.colorid}}" sizeid="{{item.sizeid}}" price="{{item.price}}" cartid="{{item.cartid}}"/></div>
+								<div class="add"><i class="iconfont icon-add" ng-click="add($event)" eid="{{item.eid}}" itemid="{{item.itemid}}" colorid="{{item.colorid}}" sizeid="{{item.sizeid}}" price="{{item.price}}" cartid="{{item.cartid}}" orderqty="{{item.orderqty}}"></i></div>
+							
+							</div>
+						</div>
+						
+					</li>
+				</ul>
+				<div class="empty" style="display: none;">
+					<div class="icon"></div>
+					<p>您的购物车空空如也~</p>
+					<div class="tohome" ui-sref="home">去首页看看</div>
+				</div>
+			</div>
+		</div>
+		</div>
+	</div>
+	<div class="cart_foot bt">
+		<div class="cart_foot_box1" ng-show="foot">
+			<div class="foot_left1">
+				<div ng-click="all_sel($event)"></div>全选
+			</div>
+			<div class="foot_left2">
+				<div class="up">合计:<span class="sum"><span class="small">¥</span>{{totalfee[0].itprice.big_price}}.<span class="small">{{totalfee[0].itprice.small_price}}</span></span></div>
+			</div>
+			<div class="foot_right" ng-click="go_balance()">去结算<p style="display: inline;">(<span>{{jsqty}}</span>)</p></div>
+		</div>
+		<div class="cart_foot_box1" ng-show="!foot">
+			<div class="foot_left1">
+				<p class="all_edit_nor" ng-click="all_edit_sel($event)"></p>
+				全选
+			</div>
+			<ul class="foot_right2">
+				<li class="collect" ng-click="toCollect()">收藏</li>
+				<li class="cut" ng-click="cut()">删除</li>
+			</ul>
+		</div>
+	</div>
+</div>
+	<div id="tab">
+		<div class="tab_table tab_table1">
+			<a href="" ui-sref="home" class="tab_a"><img src="imgs/tabbar/tab_icon_0_nor@3x.png" alt=""/></a>
+			<a ui-sref='category' href="" class="tab_a"><img src="imgs/tabbar/tab_icon_1_nor@3x.png" alt=""/>
+			</a>
+			<a href="" ui-sref='cart' class="tab_a">
+				<div>
+					<img src="imgs/tabbar/tab_icon_2_sel@3x.png" alt=""  ng-show="!cart_show"/>
+					<p>{{qtytotal}}</p>
+				</div>
+			</a>
+			<a href="" ui-sref='mine' class="tab_a"><img src="imgs/tabbar/tab_icon_3_nor@3x.png" alt=""/>
+			</a>
+		</div>
+		<div class="tab_table tab_table2">
+			<a href="" ui-sref="home" class="tab_a"><img src="imgs/tabbar/tab_icon_0_nor@3x.png" alt=""/></a>
+			<a ui-sref='categoryka' href="" class="tab_a"><img src="imgs/tabbar/tab_icon_4_nor@3x.png" alt=""  ng-show="!cate_show"/>
+			</a>
+			<a ui-sref='category' href="" class="tab_a"><img src="imgs/tabbar/tab_icon_1_nor@3x.png" alt=""  ng-show="!cate_show"/>
+			</a>
+			<a href="" ui-sref='cart' class="tab_a">
+				<div>
+					<img src="imgs/tabbar/tab_icon_2_sel@3x.png" alt=""  ng-show="!cart_show"/>
+					<p>{{qtytotal}}</p>
+				</div>
+			</a>
+			<a href="" ui-sref='mine' class="tab_a"><img src="imgs/tabbar/tab_icon_3_nor@3x.png" alt=""  ng-show="!mine_show"/>
+			</a>
+		</div>
+	</div>
+	<div class="cart_prompt" style="display: none;">
+		<div class="pic"><img src="imgs/detail/cart_success.png"></div>
+		<div class="txt">收藏成功</div>
+	</div>
+	<div class="is_load" style="display: none;">
+		<div class="pic"><img src="imgs/loading.gif"></div>
+		<div class="txt">请求加载中</div>
+	</div>
+	<div class="cart_confirm" style="display: none;">
+		<div class="confirm">
+			<div class="info"><div class="txt"></div></div>
+			<div class="operate bt">
+				<div class="fl_l br yes">确定</div>
+				<div class="fl_r  no">取消</div>
+			</div>
+		</div>
+	</div>
+	<prompt></prompt>
+	<loading></loading>
+</div>

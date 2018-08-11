@@ -1,0 +1,17 @@
+<div class="cost_sel">
+	<div class="cost_sel_head ab">
+		<div class="cost_sel_left m_l"></div>
+		<div class="cost_sel_title m_m">选择成本中心</div>
+		<div class="cost_cancel m_r" ng-click="cancel_cost()"></div>
+	</div>
+	<div class="cost_sel_body">
+		<div class="cost_sel_wrapper">
+			<div class="cost_sel_body_box">
+				<ul class="sel_list">
+					<li ng-repeat="item in cost_data" organizeid = "{{item.organizeid}}" organizename = "{{item.organizename}}" class="ab"><span>{{item.organizename}}</span><div class="sel_draw"></div></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="cost_sel_foot"></div>
+</div>

@@ -1,0 +1,82 @@
+.pay{
+	width:100%;
+	height:100%;
+	background:#f1f2f6;
+	position:relative;
+}
+.pay .pay_head{
+	width:100%;
+	height:45px;
+	position:absolute;
+	top:0;
+	left:0;
+	background:white;
+}
+.pay .pay_body{
+	width:100%;
+	height:100%;
+	box-sizing:border-box;
+	padding-top:45px;
+	padding-bottom: 45px;
+}
+.pay .pay_body_box{
+	width:100%;
+	height:100%;
+}
+.pay .pay_foot{
+	width:100%;
+	height:50px;
+	position:fixed;
+	bottom: 0;
+	left:0;
+	box-sizing:border-box;
+}
+.pay .pay_foot .save{
+	width:100%;
+	height:40px;
+	background:#f52f2c;
+	text-align:center;
+	line-height:40px;
+	color:white;
+}
+
+.pay .pay_mode{
+	width:100%;
+	background:white;
+	box-sizing:border-box;
+	padding-left:15px;
+}
+.pay .mode_title{
+	font-size:15px;
+	width:100%;
+	height:50px;
+	line-height:50px;
+}
+.pay  .mode_title .icon-zhifu{
+	padding-right:10px;
+}
+.pay .mode_sel li{
+	font-size:13px;
+	text-align:center;
+	width:70px;
+	height:30px;
+	line-height:30px;
+	border-radius:3px;
+	border:1px solid #cbcbcb;
+	float: left;
+	margin-right:10px;
+}
+
+.pay .pay_foot_box{
+	width:100px;
+	height:40px;
+	margin:0 auto;
+	background:#f52f2c;
+	text-align:center;
+	line-height:40px;
+	border-radius:3px;
+	color:white;
+}
+
+.pay .pay_mode .tips{font-size: 12px; color: #868688; padding: 10px 0; box-sizing: border-box; height:35px;}
+

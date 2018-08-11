@@ -1,0 +1,126 @@
+/*--物流跟踪--*/
+.follow{
+	width:100%;
+	height:100%;
+	position: relative;
+	background:white;
+	z-index:200;
+}
+.follow .follow_head{
+	width:100%;
+	height:45px;
+	position:absolute;
+	top:0;
+	left:0;
+	background:white;
+	z-index: 101;
+}
+
+.follow .follow_body{
+	width:100%;
+	height:100%;
+	box-sizing:border-box;
+	padding-top:45px;
+}
+.follow .follow_wrapper{
+	width:100%;
+	height:100%;
+	position:relative;
+	overflow: hidden;
+}
+.follow .follow_body_box{
+	min-height: 101%;
+}
+/*--body--*/
+.follow .order_number{
+	width:100%;
+	height:46px;
+	font-size:14px;
+	line-height:46px;
+	text-indent:15px;
+	color:#686868;
+	background:white;
+}
+.follow .order_number span{
+	color:#111111;
+}
+.follow .space2{
+	width:100%;
+	height:10px;
+	background:#f1f2f6;
+}
+.follow .info_follow{
+	width:100%;
+	height:auto;
+	position:relative;
+	background:white;
+}
+.follow .info_follow_li{
+	width:100%;
+	box-sizing: border-box;
+	position:relative;
+	padding:15px 0 0 50px; 
+	font-size:14px;
+	line-height:20px;
+	
+}
+.follow .info_content{
+	width:100%;
+	box-sizing: border-box;
+	padding-right:25px;
+}
+.follow .info_time{
+	font-size:14px;
+	color:#888888;
+	line-height:20px;
+}
+.follow .li_box{
+	width:100%;
+	height:100%;
+	position:relative;
+	padding-bottom:10px;
+}
+.follow .bg_ol{
+	width:7px;
+	height:7px;
+	background:url(../imgs/icon.png) 0 0 no-repeat;
+	background-size:500px 667px;
+	background-position:-213px -370px;
+	position:absolute;
+	top:21px;
+	left:22px;
+}
+.follow .info_follow_li:first-child .bg_ol{
+	width:18px;
+	height:18px;
+	background:url(../imgs/icon.png) 0 0 no-repeat;
+	background-size:500px 667px;
+	background-position:-173px -370px;
+	position:absolute;
+	top:16px;
+	left:16px;
+}
+.follow .v_line_box{
+	width:1px;
+	height:100%;
+	box-sizing: border-box;
+	position:absolute;
+	top:0;
+	left:25px;
+	padding-top:20px;
+}
+.follow .v_line{
+	width:1px;
+	height:100%;
+	box-sizing: border-box;
+	background:#bebebe;
+}
+.follow .k_line{
+	width:3px;
+	height:10px;
+	background:white;
+	position:absolute;
+	bottom:0;
+	left:-1px;
+	z-index:10px;
+}

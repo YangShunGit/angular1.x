@@ -1,0 +1,42 @@
+
+/*-----------------------------*/
+.setPage{background: #f0f2f5; font-size: 14px;}
+.setPage .fl_l{float: left;}
+.setPage .fl_r{float: right}
+.setPage .navBar{background: #f8f8f8;height: 44px; line-height: 44px; position: relative; font-size: 18px; color: #232326;}
+.setPage .shortcut{
+    width: 44px;
+    text-align: center;
+    position:absolute;
+    color: #3c444b;
+}
+.setPage ul{background: #FFFFFF; margin-bottom: 10px;}
+.setPage li{margin-left:12px; height: 50px; line-height: 50px; vertical-align: middle; padding-right: 12px;}
+.setPage .last{position:relative;}
+
+.setPage .icon-more{
+	float: right;
+	color: #bfbfbf;
+}
+.setPage .a{
+	display: block;
+	width:100%;
+	height:100%;
+}
+.setPage ul a{	color: #3c444b;}
+.setPage p.fl_r{color: #a9aaac;}
+.setPage .li_box{
+	width:100%;
+	height:100%;
+}
+.setPage .logOutForm{
+	width: 100%;
+    box-sizing: border-box;
+    padding: 0 12px;
+}
+.setPage .logOn{width:100%;background:#f52f2c;color: #FFFFFF; height: 40px;border-radius: 2px;    font-size: 14px;text-align: center;line-height: 33px;}
+.setPage .switchery{
+	position:absolute;
+	top:10px;
+	right:10px;
+}

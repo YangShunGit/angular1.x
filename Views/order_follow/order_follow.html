@@ -1,0 +1,32 @@
+<div class="follow">
+	<div class="follow_head ab">
+		<div class="follow_left m_l" ng-click="myBack()"><i class="iconfont icon-back"></i></div>
+		<div class="follow_title m_m">订单跟踪</div>
+	</div>
+	<div class="follow_body">
+		<div class="follow_wrapper">
+			<div class="follow_body_box">
+				<div class="order_number">
+					订单号：<span>{{exams.billno}}</span>
+				</div>
+				<div class="space2"></div>
+				<div class="info_follow">
+					<div class="v_line_box">
+						<div class="v_line"></div>
+						<div class="k_line"></div>
+					</div>
+					<ul>
+						<li ng-repeat="item in exams.logisticss track by $index" class="info_follow_li"><div class="bg_ol"></div>
+							<div class="li_box bgr-bottom">
+							<div class="info_content">{{item.actiondesc}}</div>
+							<div class="info_time"><span class="day">{{item.actiontime}}</span></div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+

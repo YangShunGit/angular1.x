@@ -1,0 +1,200 @@
+.upload {
+	width: 100%;
+	height: 100%;
+	background: white;
+}
+
+.upload .upload_body{
+	width:100%;
+	height:100%;
+	box-sizing: border-box;
+	padding-top:45px;
+}
+.upload .upload_wrapper{
+	width:100%;
+	height:100%;
+	position: relative;
+	overflow: hidden;
+}
+.upload .upload_iscroll{
+	width:100%;
+	min-height:101%;
+}
+.upload .place_head {
+	width: 100%;
+	height: 45px;
+	position: absolute;
+	top:0;
+	left:0;
+	z-index: 101;
+	background:white;
+}
+
+.upload .place_back {
+	width: 30%;
+	height: 44px;
+	line-height: 44px;
+	box-sizing: border-box;
+}
+
+.upload .icon-back {
+	padding: 14px 8px 14px 14px;
+	color: #656b70;
+}
+.upload .place_head .close{padding: 12px 6px;}
+.upload .place_title {
+	font-size: 17px;
+	width: 40%;
+	height: 44px;
+	line-height: 44px;
+	color: #3C444B;
+	text-align: center;
+}
+
+.upload .place_back,
+.upload .place_title {
+	float: left;
+}
+
+.upload .pic1,.upload .pic2,.upload .pic3 {
+	width: 240px;
+	height: 315px;
+	margin: 0 auto;
+	border: 1px solid #cbcbcb;
+	box-sizing: border-box;
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+	vertical-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.upload .date,.upload .next{ height:60px;box-sizing: border-box; padding: 0 12px;}
+.upload .pic1 .pic1Img{
+	width:100%;
+	overflow: hidden;
+	height: 0;
+	position: relative;
+    z-index: 201;
+}
+.upload .pic1 img {
+	width: 100%;
+	display: block;
+}
+
+.upload .pic_look {
+	width: 100%;
+	
+}
+
+.upload .photo {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	outline: none;
+	opacity: 0;
+	z-index: 100;
+}
+
+.upload .icon-jia {
+	font-size: 40px;
+	color: #f3f1f2;
+}
+
+.upload .icon_box {
+	position: absolute;
+	top: 120px;
+	left: 0;
+	width: 100%;
+	height: 50px;
+}
+
+.upload .pic_text {
+	position: absolute;
+	top: 173px;
+	left: 0;
+	width: 100%;
+	color: #cacaca;
+	font-size: 14px;
+}
+
+.upload #term {
+	font-size: 12px;
+	width: 74px;
+	height: 27px;
+	border: none;
+	background: #f1f2f6;
+	line-height: 27px;
+	text-align: center;
+	outline: none;
+}
+
+.upload .next_button {
+	border: none;
+	background: #f52f2c;
+	outline: none;
+	height: 40px;
+	width: 100%;
+	font-size: 14px;
+	border-radius: 3px;
+	color:#FFFFFF;
+	margin: 12px 0;
+}
+
+.upload .fl_l {
+	float: left;
+}
+
+.upload .date p{font-size: 13px; color: #2c2c2e; margin: 10px 0;}
+.upload .date .choice {
+	border: 1px solid #cbcbcb;
+	width: 56px;
+	height: 27px;
+	line-height: 27px;
+	text-align: center;
+	font-size: 12px;
+	color: #232326;
+	margin-right: 10px;
+}
+.upload #f{border: 1px solid #f52f2c; color: #f52f2c;}
+.upload .deadline .to{font-size: 12px; display: inline}
+.upload .deadline{line-height: 25px;}
+.upload .clearfix {
+   +zoom:1
+}
+.upload .clearfix:after {
+	clear: both;
+	content: ".";
+	display: block;
+	font-size: 0;
+	line-height: 0;
+	visibility: hidden;
+	width: 0;
+	height: 0
+}
+.upload .space3{
+	width:100%;
+	height:50px;
+}
+.uploadAgain{
+	width:100%;
+	height:30px;
+	padding-top: 10px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	position: relative;
+	display: none;
+}
+.againTxt{
+	width: 20%;
+	text-align:center;
+	height: 30px;
+	color: #2c2c2e;
+    line-height: 30px;
+    font-size: 13px;
+    position:relative;
+}

@@ -1,0 +1,76 @@
+.place{
+	width:100%;
+	height:100%;
+	box-sizing: border-box;
+	padding-top:50%;
+}
+.place_mask{
+	width:100%;
+	height:100%;
+}
+.place .sel_title,.place .box_li{
+	float: left;
+}
+.place_cancel{
+	width:20px;
+	height:20px;
+	background:url(../imgs/icon.png) -150px -160px no-repeat;
+	background-size:500px 667px;
+	position: absolute;
+	top:20px;
+	right:20px;
+	z-index: 500;
+}
+.place .place_sel{
+	width:100%;
+	height:45px;
+	position:fixed;
+	top:345px;
+	left:0;
+	background:#f8f8f8;
+	box-sizing: border-box;
+}
+.place .place_box{
+	width:100%;
+	height:35px;
+	background:white;
+	position:fixed;
+	top:90px;
+	left:0;
+}
+.place .box_li{
+	font-size:14px;
+	width:33%;
+	height:35px;
+	line-height:35px;
+	color:#374047;
+	text-align: center;
+	border-bottom:1px solid #bfbfbf;
+}
+.place .box_li:last-child{
+	width:34%;
+}
+.place .place_list_box{
+	width:100%;
+	height: 100%;
+	box-sizing: border-box;
+	padding-top:115px;
+	overflow:hidden;
+}
+.place_list{
+	box-sizing: border-box;
+	height:100%;
+	overflow: auto;
+}
+.place_li{
+	font-size:14px;
+	width:100%;
+	height:40px;
+	line-height:40px;
+	padding-left:15px;
+	box-sizing: border-box;
+	border-bottom: 1px solid #e4e5e9;
+	background:#f8f8f8;
+}
+
+

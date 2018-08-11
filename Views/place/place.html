@@ -1,0 +1,24 @@
+<div class="place">
+	<div class="placeCancelMask"></div>
+	<div class="place_mask">
+		<div class="place_sel ab">
+			<div class="m_l"></div>
+			<div class="sel_title m_m">地址选择</div>
+			<div class="place_cancel m_r" ng-click="cancel_place();$event.stopPropagation();"></div>
+		</div>
+		<ul class="place_box ab">
+			<li class="box_li province">{{province}}</li>
+			<li class="box_li city">{{city}}</li>
+			<li class="box_li area">{{area}}</li>
+		</ul>
+		<div class="place_list_box">
+			<div class="place_wrapper">
+			<ul class="place_list"  ng-style="proStyle">
+				<li class="place_li" ng-repeat="item in placeInfo" areaid="{{item.areaid}}" parentid="{{item.parentid}}" areaname="{{item.areaname}}" ng-click="place($event)" repeat-finish="ref()">{{item.areaname}}</li>
+			</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+

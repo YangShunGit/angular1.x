@@ -1,0 +1,29 @@
+{
+	"order":{
+		"address_info":{
+			"cost_center":"上海田子坊",
+			"receiver":"张三",
+			"phone_number":"17688889295",
+			"tel":"",
+			"place":"上海市徐汇区城区",
+			"detail_address":"宛平南路256号",
+			"postalcode":"",
+			"default_address":true
+		},
+		"pay_mode":"合约结算",
+		"carry_info":{
+			"carry_mode":"合约送货时间",
+			"carry_date":"3月1号",
+			"carry_time":"12:25:20"
+		},
+		"receipt_info":"无需发票",
+		"shop_price":"",
+		"carry_cost":5.00,
+		"service_cost":5.00,
+		"true_price":""
+		
+		
+	}
+
+
+}

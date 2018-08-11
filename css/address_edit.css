@@ -1,0 +1,173 @@
+.icon-back {
+	color: #656b70;
+}
+
+.addressPage {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	top:0;
+	left:0;
+	background: white;
+	overflow: hidden;
+}
+
+.address_head {
+	width: 100%;
+	height: 45px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index:101;
+	background:white;
+}
+.address_head .finish{
+	color:#f52f2c;
+}
+	
+.address_body {
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	padding-top: 45px;
+	padding-bottom: 60px;
+}
+
+.address_body_box {
+	width: 100%;
+	height: 100%;
+}
+.address_body_box>div{
+	min-height:101%;
+}
+.address_foot {
+	width: 100%;
+	height: 60px;
+	position: absolute;
+	bottom: -60px;
+	left: 0;
+	z-index:33;
+	box-sizing: border-box;
+	padding: 10px 20px 10px 20px;
+}
+
+.address_foot .save {
+	width: 100%;
+	height: 40px;
+	background: #f52f2c;
+	text-align: center;
+	line-height: 40px;
+	color: white;
+	border-radius: 2px;
+}
+
+
+/*---body----*/
+
+.address_ul {
+	width: 100%;
+	min-height:101%;
+}
+
+.address_ul li{
+	width: 100%;
+    height: 50px;
+    line-height: 50px;
+    font-size: 14px;
+    color: #3c444b;
+    position: relative;
+    box-sizing: border-box;
+    padding: 15px 10px 15px 78px;
+}
+.address_ul li span {
+    position: absolute;
+    left: 12px;
+    top: 0;
+}
+.address_ul li input {
+    height: 20px;
+    line-height: 20px;
+    border: 0 none;
+    font-size: 14px;
+    width: 100%;
+    -webkit-appearance: none;
+    vertical-align: top;
+    color: #333;
+}
+.address_ul li a{color: #3c444b;}
+.address_ul li .cost_center,.address_ul li .location_now{
+	height:20px;
+	line-height:20px;
+}
+.address_ul li .icon-more{
+	position: absolute;
+	right:10px;
+	top:15px;
+	line-height: 16px;
+}
+.address_ul li:after {
+	height: 1px;
+	content: '';
+	width: 100%;
+	border-top: 1px solid #e5e5e7;
+	position: absolute;
+	bottom: -1px;
+	right: 0;
+	transform: scaleY(0.5);
+	-webkit-transform: scaleY(0.5);
+	z-index: 10;
+}
+
+.address_ul li:first-child {
+	color: gray;
+}
+
+.addressPage input::-webkit-input-placeholder {
+	font-size: 14px;
+	line-height: 18px;
+}
+
+.address_ul li .three_address {
+	display: block;
+	height: 50px;
+}
+
+.address_ul li:last-child {
+	height: 70px;
+	padding-top: 0;
+	padding-left:12px;
+}
+
+.addressPage .default_set {
+	position: relative;
+}
+
+.addressPage .up {
+	font-size: 14px;
+	height: 30px;
+	line-height: 50px;
+}
+
+.addressPage .down {
+	font-size: 12px;
+	color: #84888b;
+	height: 40px;
+	line-height: 30px;
+}
+
+.addressPage .switch {
+	position: absolute;
+	top: 17px;
+	right: 65px;
+}
+
+
+.addressPage .mask_confirm {
+	background: rgba(0, 0, 0, 0.6);
+}
+.address_ul li:nth-child(2){
+    padding: 15px 10px 15px 64px;
+}
+.address_ul li:nth-child(4){
+    padding: 15px 10px 15px 51px;
+}

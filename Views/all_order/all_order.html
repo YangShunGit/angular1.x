@@ -1,0 +1,116 @@
+<div class="myOrder">
+	<div class="myOrder_head ab">
+		<div class="myOrder_left m_l" ng-click="myBack()"><i class="iconfont icon-back"></i></div>
+		<div class="myOrder_title myOrder_title_noActive m_m" ng-click="order_nav()"></div>
+		<div class="myOrder_right" ng-click="is_search()">
+			<div class="orderSearch ab">
+				<div class="search_input">
+					<div class="search_type_a">
+					</div>
+					<input type="text" class="search_it" placeholder=""/>
+					<p class="clear_input"></p>
+				</div>
+				<div class="search_go" ng-click="sou()"><a href="">搜索</a></div>
+			</div>
+		</div>
+		
+	</div>
+	<div class=""></div>
+	<div class="myOrder_body">
+		<div class="myOrder_wrapper">
+			<div class="myOrder_body_box">
+				<ul class="myOrder_ul">
+					<li id="myOrder_li">
+						<div class="space2 bgr-bottom"></div>
+						<div class="myOrder_li_a">
+							<div class="li_head bgr-bottom">
+								订单号:<span class="head_number"></span>
+								<div class="cancel_order_box">
+									<div class="line_a bl"><div class="line_al"></div></div>
+									<div class="cancel_order"></div>
+								</div>
+								<span class="head_status"></span>
+							</div>
+							<div id="li_package">
+								<div class="package_head bgr-bottom">
+									<span class="package_name"></span>(包裹号:
+									<span class="package_number"></span>)
+								</div>
+								<div class="package_body">
+									<div class="info_follow info_follow1">
+										<div class="truck"></div>
+
+										<div class="day_time">
+											<span class="day"></span>
+											<span class="time"></span>
+										</div>
+									</div>
+									
+									<div class="shop_box">
+										<div class="shop_pic"><img src=""  alt="" onerror="this.src='imgs/default2.jpg'" /></div>
+										<div class="shop_title">
+											<div></div>
+										</div>
+									</div>
+									<div class="shop_box1">
+										<div class="swiper-container">
+											<div class="swiper-wrapper">
+												<div id="swiper-slide"><img src=""  alt=""  onerror="this.src='imgs/default2.jpg'" /></div>
+											</div>
+										</div>
+									</div>
+									<div class="true_money bgr-bottom">
+										<div class="money_content">共<span class="counts"></span>件商品&nbsp;实付款:￥<span class="shop_price"></span></div>
+									</div>
+								</div>
+								<div class="some_function">
+									<ul class="some_function_ul">
+										<li class="again_buy">
+											<a href="">再次购买</a>
+										</li>
+										<li class="confirm_receipt">
+											<a href="">确定收货</a>
+										</li>
+										<li class="view_logistics">
+											<a href="" >查看物流</a>
+										</li>
+										<li class="again_apply">
+											<a href="">再次申请</a>
+										</li>
+										<li class="apply_service">
+											<a href="">申请售后</a>
+										</li>
+										
+									</ul>
+								</div>
+							</div>
+						</div>
+						
+					</li>
+				</ul>
+				<loadingmore></loadingmore>
+				<nomore></nomore>
+				<ifempty></ifempty>
+			</div>
+		</div>
+	</div>
+	<div class="arr_up"></div>
+	<div class="status_box">
+		<div class="status_wrapper">
+			<div class="status_nav_list">
+				<ul>
+					<li ng-repeat="state in sdstates" >
+						<div data-index="{{$index}}" billstate="{{state.billstate}}" ng-click="stateFn($event)">{{state.statename}}</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<prompt></prompt>
+	<div class="searchMask"></div>
+	<div class="mask" ng-click="mask_fn()"></div>
+	<orderfollow></orderfollow>
+	<confirm></confirm>
+	<totop></totop>
+	<loading></loading>
+</div>

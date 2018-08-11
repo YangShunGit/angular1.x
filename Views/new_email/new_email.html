@@ -1,0 +1,28 @@
+<div class="r_email">
+	<div class="email_head ab">
+		<div class="email_left m_l" ng-click="cancel()"><i class="iconfont icon-back"></i></div>
+		<div class="email_title m_m">修改邮箱</div>
+		<div class="email_right m_r"></div>
+	</div>
+	<div class="email_body">
+		<div class="email_wrapper">
+			<div class="email_body_box">
+				<div class="space2"></div>
+				<div class="x_email_box">
+					<div class="newEmailTitle">新邮箱</div>
+					<input type="text" value="{{email}}" class="x_email" placeholder="请填写邮箱"/>
+					<div class="empty" ng-click="clear_email()"></div>
+				</div>
+				<div class="space2"></div>
+				<div class="identifyCode_box">
+					<div class="codeInput_box ar">
+					<div class="codeTitle">验证码</div>
+					<input type="text" placeholder="输入邮箱验证码" class="codeInput"/>
+					</div>
+					<div class="getCode" ng-click="getCode()">获取验证码</div>
+				</div>
+				<div class="next_box"><div class="next" ng-click="confirmEmail()">确定</div></div>
+			</div>
+		</div>
+	</div>
+</div>

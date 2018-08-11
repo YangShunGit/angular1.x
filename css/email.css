@@ -1,0 +1,138 @@
+.r_email{
+	width:100%;
+	height:100%;
+	position: absolute;
+	top:0;
+	left:0;
+	z-index:200;
+}
+.r_email .email_head{
+	width:100%;
+	height:45px;
+	position:absolute;
+	top:0;
+	left:0;
+	background:#f8f8f8;
+}
+.r_email .email_right{
+	color: #f52f2c;
+}
+.r_email .email_body{
+	width:100%;
+	height:100%;
+	box-sizing:border-box;
+	padding-top:45px;
+}
+.r_email .email_wrapper{
+	width:100%;
+	height:100%;
+	position:relative;
+}
+
+.r_email .hadEmail{
+	width: 100%;
+	height: 30px;
+	font-size: 14px;
+    text-indent: 12px;
+	margin-top:40px;
+	color:#6d6d6f;
+}
+/*-----验证码-----*/
+.r_email .identifyCode_box{
+	width:100%;
+	height: 50px;
+	background:white;
+	position: relative;
+}
+.r_email .codeInput_box{
+	width: 70%;
+	height: 50px;
+	float: left;
+}
+.r_email .codeTitle,.r_email .newEmailTitle{
+	width: 70px;
+	height: 50px;
+	font-size: 14px;
+	color:#3d444a;
+	line-height: 50px;
+	text-indent:12px;
+	position: absolute;
+	top:0;
+	left:0;
+	z-index: 1;
+}
+.r_email .codeInput{
+	width: 100%;
+	height: 50px;
+	font-size: 14px;
+	box-sizing: border-box;
+	padding-left:70px;
+	
+}
+.r_email .getCode{
+	width:30%;
+	height: 50px;
+	font-size: 14px;
+	line-height: 50px;
+	text-align: center;
+	color:#f2332b;
+	float: right;
+}
+#code-active{
+	color:#cacaca;
+}
+/*====================*/
+
+
+.r_email .x_email_box{
+	width:100%;
+	height:50px;
+	position:relative;
+}
+.r_email .x_email{
+	width:100%;
+	height:50px;
+	box-sizing:border-box;
+	padding-right:40px;
+	padding-left:70px;
+	border:none;
+	outline:none;
+	font-size:14px;
+}
+.r_email .empty{
+	width:16px;
+	height:16px;
+	background:url(../imgs/icon.png) 0 0 no-repeat;
+	background-size:500px 667px;
+	background-position:-343px -290px;
+	position:absolute;
+	top:17px;
+	right:10px;
+}
+.r_email .point{
+	width:100%;
+	height:30px;
+	font-size:12px;
+	color:#aaabaf;
+	text-indent:15px;
+	line-height:40px;
+	background:#f1f2f6;
+}
+
+.r_email .next_box{
+	width: 100%;
+	height: 40px;
+    box-sizing: border-box;
+    padding: 0 20px 0 20px;
+	
+}
+.r_email .next{
+	width: 100%;
+	height: 40px;
+	line-height:40px;
+	margin-top:10px;
+	text-align:center;
+	background:#cacaca;
+	color:white;
+	border-radius: 3px;
+}

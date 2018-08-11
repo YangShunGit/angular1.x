@@ -1,0 +1,47 @@
+
+<div class="setPage">
+	<!------------导航栏------------>
+	<div class="navBar ab">
+		<div class="back m_l" ng-click="myBack()">
+			<i class="iconfont icon-back"></i>
+		</div>
+		<div class="title m_m">设置</div>
+	</div>
+	<div class="list">
+		<!--<div class="upper">
+			<ul>
+				<li>
+					<a href="" class="block_a">
+						<div class="li_box">清除图片缓存<i class="iconfont icon-more"></i></div>
+					</a>
+				</li>
+				<li class="last">
+					<a href="" class="block_a">
+						<div class="li_box">开启省流量模式</div>
+					</a>
+					 <input type="checkbox" class="js-switch" checked />
+				</li>
+			</ul>
+		</div>-->
+		<div class="lower">
+			<ul>
+				<li class="ab">
+					<a class="block_a hotline" href="">
+						<div class="li_box">客服电话<p class="fl_r"></p></div>
+					</a>
+				</li>
+				<li class="last">
+					<a href="" class="block_a" ui-sref="help_center">
+						<div class="li_box">帮助中心<i class="iconfont icon-more"></i></div>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<form action="/passport/loginout" method="post" class="logOutForm">
+		<input type="submit" class="logOn" value="退出登录"/>
+		<input type="hidden" name="userid" id="userid"/>
+		<input type="hidden" name="openid" id="openid"/>
+	</form>
+	
+</div>

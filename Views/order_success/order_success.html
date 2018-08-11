@@ -1,0 +1,50 @@
+<div class="submit">
+	<div class=" submit_head ab ">
+		<div class="m_l"></div>
+		<div class="submit_title m_m ">订单提交成功</div>
+		<div class="submit_over m_r " ng-click="goHome()">
+			完成
+		</div>
+	</div>
+	<div class="submit_body ">
+		<div class="submit_wrapper ">
+		<div class="submit_body_box ">
+			<div class="submit_content_box ">
+				<div class="submit_content ">
+					<div class="submit_up ">
+						<div class="pay_mode ">订单编号：<span class="mode_value ">{{billno}}</span></div>
+						<div class="order_money ">订单金额：<span class="money_value ">￥{{totalfee}}</span></div>
+						<div class="submit_pic "><img src="imgs/order/submit_pic.jpg " alt=" " /></div>
+					</div>
+					<ul class="submit_ul ">
+						<li><a href=" " ui-sref="look_order ">查看订单</a></li>
+						<li><a href=" " ui-sref="home ">继续购物</a></li>
+					</ul>
+				</div>
+			</div>
+			<div  class="exam bt ab " style="display: none;">
+				<div class="title ab "><p class="fl_l ">您的订单需要审批，审批流程如下</p></div>
+				<div class="progress ">
+					<ul>
+						<li class="clearfix " ng-repeat="item in bpms ">
+							<div class="bpms_index">{{$index+1}}</div>
+							<ul class="r ">
+								<li class="type ">审批类型:{{item.reason}}</li>
+								<li>
+									<ul class="ab ">
+										<li class="advice ">订单状态:<span class="done ">{{item.statename}}</span></li>
+										<li class="approver ">{{item.step}}</li>
+										<li class="time ">审批人:{{item.username}}</li>
+										<li class="mar_b "></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+			
+		</div>
+		</div>
+	</div>
+</div>

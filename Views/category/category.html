@@ -1,0 +1,91 @@
+<div class="category_box">
+<div class="category">
+	<!----------------搜索框-------------->
+	<div class="search ab">
+	<div class="back">
+	<a href="" ng-click="myBack()">
+		<i class="iconfont icon-back"></i>
+	</a>	
+	</div>
+	<a href="" class="search_div_a" ui-sref="searchPage">
+	<div class="search_div">	
+		<i class="iconfont icon-sousou"></i>
+		在这里搜索你要找的商品
+	</div>
+	</a>
+	<div class="search_category">
+	<a href="" ui-sref="purchase_words">
+		<div><i class="iconfont icon-liuyan2"></i></div>	
+	</a>	
+	</div>
+	</div>
+	
+	
+	<!--热门分类-->
+	<div class="list_main">
+	<!--左列表-->
+	<div class="left_list" id="cate_left">
+		<ul>
+			<li ng-repeat="item in arrList" class="left_list_li ab" data-index="{{$index}}" data-id="{{item.categoryid}}">{{item.categorycname}}</li>
+		</ul>
+	</div>
+	<!--右详情-->
+	
+	<div id="cate_right">
+	<div class="list_detail">
+		<div class="right_cell" ng-repeat="type in arrCategory track by $index">
+			<h3 class="cell_title" categoryid="{{type.categoryid}}" categoryno="{{type.categoryno}}">{{type.categorycname}}   <span class="more"></span></h3>
+			<ul class="cell_title_ul">
+				<li class="cell_li" ng-repeat="item in type.children" categoryid="{{item.categoryid}}" categoryno="{{item.categoryno}}">
+					<div class="pic_box"><a href=""><img lazy-src="{{item.pictureurl}}" alt="" onerror="this.src='imgs/default.jpg'"/></a></div>
+					<div class="pic_category">{{item.categorycname}}</div>
+				</li>
+			</ul>
+		</div>
+		
+	</div>
+	</div>
+	</div>
+	
+</div>
+	
+	<div id="tab">
+		<div class="tab_table tab_table1">
+			<a href="" ui-sref="home" class="tab_a"><img src="imgs/tabbar/tab_icon_0_nor@3x.png" alt=""/></a>
+			<a ui-sref='category' href="" class="tab_a"><img src="imgs/tabbar/tab_icon_1_sel@3x.png" alt=""/>
+			</a>
+			<a href="" ui-sref='cart' class="tab_a">
+				<div>
+					<img src="imgs/tabbar/tab_icon_2_nor@3x.png" alt=""  ng-show="!cart_show"/>
+					<p>{{qtytotal}}</p>
+				</div>
+			</a>
+			<a href="" ui-sref='mine' class="tab_a"><img src="imgs/tabbar/tab_icon_3_nor@3x.png" alt=""/>
+			</a>
+		</div>
+		<div class="tab_table tab_table2">
+			<a href="" ui-sref="home" class="tab_a"><img src="imgs/tabbar/tab_icon_0_nor@3x.png" alt=""/></a>
+			<a ui-sref='categoryka' href="" class="tab_a"><img src="imgs/tabbar/tab_icon_4_nor@3x.png" alt=""  ng-show="!cate_show"/>
+			</a>
+			<a ui-sref='category' href="" class="tab_a"><img src="imgs/tabbar/tab_icon_1_sel@3x.png" alt=""  ng-show="!cate_show"/>
+			</a>
+			<a href="" ui-sref='cart' class="tab_a">
+				<div>
+					<img src="imgs/tabbar/tab_icon_2_nor@3x.png" alt=""  ng-show="!cart_show"/>
+					<p>{{qtytotal}}</p>
+				</div>
+			</a>
+			<a href="" ui-sref='mine' class="tab_a"><img src="imgs/tabbar/tab_icon_3_nor@3x.png" alt=""  ng-show="!mine_show"/>
+			</a>
+		</div>
+	</div>
+</div>
+	
+	
+	
+	
+	
+	
+	
+	
+

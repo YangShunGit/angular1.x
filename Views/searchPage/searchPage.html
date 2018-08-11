@@ -1,0 +1,37 @@
+<div class="search">
+	<div class="search_head ab">
+		<div class="search_back" ng-click="cancel()"><i class="iconfont icon-back"></i></div>
+		<div class="search_input">
+			<div class="search_type" ng-click="change_yn()">
+				<div class="vip is" datatype="0" ng-show="yn">专属</div>
+				<div class="vip no" datatype="1" ng-show="!yn">全部</div>
+			</div>
+			<input type="text"  class="search_it"/>
+			<p class="clear_input"></p>
+		</div>
+		<div class="search_go" ng-click="sou()"><a href="">搜索</a></div>
+	</div>
+	<div class="search_body">
+		<div class="search_wrapper">
+			<div class="search_body_box">
+				<div class="search_hot">
+					<div class="hot_title">热搜</div>
+					<div class="hot_list_box">
+					<div class="hot_list">
+						<span class="list_li" ng-repeat="item in hot"><a href="" ng-click="search_data($event)">{{item.key}}</a></span>
+					</div>
+					</div>		
+						
+				</div>
+				<div class="search_space"></div>
+				<div class="history_search">
+					<div class="history_title">历史搜索</div>
+					<div class="history_list">
+						<div class="list_li" ng-repeat="item in history"><a href="" ng-click="search_data($event)">{{item.key}}</a></div>
+					</div>
+				</div>
+				<div class="clear_search" ng-click="history_clear()"> <i class="iconfont icon-p-delet"></i>清空历史搜索</div>
+			</div>
+		</div>
+	</div>
+</div>

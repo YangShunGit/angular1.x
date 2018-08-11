@@ -1,0 +1,52 @@
+<div class="upload">
+	<div class="place_head ab">
+		<div class="place_back">
+			<i class="iconfont icon-back" ng-click="myBack()"></i><span ng-click="myClose()">关闭</span>
+		</div>
+		<div class="place_title">上传证照</div>
+	</div>
+	<div class="upload_body">
+		<div class="upload_wrapper">
+			<div class="upload_iscroll">
+				<div class="content">
+					<div class="space3"></div>
+					<div class="pic1">
+						<div class="pic1Img"><img src="" alt="" class="pic_look pic_look1"/></div>
+						
+						<input type="file" style="filter:alpha(opacity=0);opacity:0;z-index:200;position: absolute;top: 120px;left: 100px;width: 40px;height: 40px;" name="businessLicence" id="businessLicence" qnumber="0" cssclass="x-form-text-readonly" onchange="uploadLicense()"/>
+						<div class="icon_box"><i class="iconfont icon-jia"></i></div>
+						<div class="pic_text">营业执照</div>
+					</div>
+					<div class="space3">
+						<div class="uploadAgain" style="display: flex;">
+							<div class="againTxt" ng-click="rotateInit()">重新上传
+								<input type="file" style="filter:alpha(opacity=0);opacity:0;z-index:200;position:absolute;left:0;width: 100%;height: 30px;" name="businessLicence" qnumber="0" cssclass="x-form-text-readonly" onchange="uploadPic2(this)" value="重新上传"/>
+							</div>
+							<div style="font-size:13px;width:20%;height:30px;line-height:30px;text-align:center;"  ng-click="rotate()" >旋转照片</div>
+						</div>
+						
+					</div>
+					<div class="date clearfix">
+						<p>证件有效期</p>
+						<div class="fl_l choice" ng-click="change($event)" id="f">长期</div>
+						<div class="fl_l choice" ng-click="change($event)" id="nf">非长期</div>
+						<div class="deadline fl_l" style="display: none;">
+							<p class="to">有效期至</p>
+							<input type="text" id="term" value="2017-03-01" />
+						</div>
+					</div>
+					<div class="next">
+						
+							<input type="button" value="立即注册" class="next_button" ng-click="test()" />
+						
+					</div>
+
+		
+				</div>
+			</div>
+		</div>
+	</div>
+	<magnifier></magnifier>
+	<prompt></prompt>
+	<loading></loading>
+</div>

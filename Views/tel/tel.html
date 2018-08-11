@@ -1,0 +1,24 @@
+<div class="r_tel">
+	<div class="tel_head ab">
+		<div class="tel_left m_l" ng-click="cancel()"><i class="iconfont icon-back"></i></div>
+		<div class="tel_title m_m">修改办公电话</div>
+		<div class="tel_right m_r"></div>
+	</div>
+	<div class="tel_body">
+		<div class="tel_wrapper">
+			<div class="tel_body_box">
+				<div class="space2"></div>
+				<div class="x_tel_box">
+					<div class="telTitle">新办公电话</div>
+					<input type="text" value="{{tel}}" class="x_tel" placeholder="请填写电话"/>
+					<div class="empty" ng-click="clear_tel()"></div>
+				</div>
+				<div class="tips">
+					请输入办公电话(可不填)
+				</div>
+				<div class="next_box"><div class="next" ng-click="reviseTel()">确定</div></div>
+				
+			</div>
+		</div>
+	</div>
+</div>

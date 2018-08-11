@@ -1,0 +1,108 @@
+<div class="fill_order">
+	<div class="order_head ab">
+		<div class="order_back m_l" ng-click="myBack()">
+			<i class="iconfont icon-back"></i>
+		</div>
+		<div class="order_title m_m">填写订单</div>
+	</div>
+	<div class="order_box">
+		<div class="order_body" id="order_wrapper">
+			<div class="order_body_box">
+				<div class="cargo_receiver ab">
+					<a href="" ui-sref="receiver_address" ng-click="keep()">
+						<div class="receiver_info">
+							<div class="info_place" organizeid="{{receiveaddress.organizeid}}">{{receiveaddress.organizename}}</div>
+							<div class="info_name">{{receiveaddress.receivername}}</div>
+							<div class="info_phone" ng-show="phone_flag">{{receiveaddress.receivermobile}}</div>
+							<div class="info_tel" ng-show="!phone_flag">{{receiveaddress.receivertel}}</div>
+							<div class="info_default">默认</div>
+						</div>
+						<div class="receiver_address"><span>{{receiveaddress.fulladdress}}</span></div>
+						<div class="cargo_receiver_sel"><i class="iconfont icon-more"></i></div>
+					</a>
+				</div>
+				<div class="noAddress" ng-click="newAddress()">
+					<div>您的收货地址为空</div>
+					<p>添加收货地址</p>
+				</div>
+				<div class="order_shop">
+					<div class="order_pic"><img ng-src="{{cart.items[0].middleurl}}" alt=""  onerror="this.src='imgs/default2.jpg'"/></div>
+					<div class="order_para ab">
+						<div class="order_para_name">{{cart.items[0].itemname}}</div>
+						<div class="order_para_box1">
+							<span class="order_para_color">颜色:{{cart.items[0].colorname}}</span>
+							<span class="order_para_model">型号:{{cart.items[0].sizename}}</span>
+						</div>
+						<div class="order_para_price"><span class="small">¥</span>{{cart.items[0].itprice.big_price}}.<span class="small">{{cart.items[0].itprice.small_price}}</span><span class="count fl_r">× {{cart.items[0].orderqty}}</span></div>
+					</div>
+				</div>
+				<div class="order_shop1">
+					<div class="border_shop ab">
+						<div class="order_shop1_wrapper">
+							<div class="order_pic" ng-repeat="item in cart.items"><img ng-src="{{item.middleurl}}" alt=""  onerror="this.src='imgs/default2.jpg'"/></div>
+						</div>
+						<div class="order_count">
+							<div ng-click="splitData()">共{{qtytotal}}件({{togethername}}) <i class="iconfont icon-more"></i></div>
+						</div>
+					</div>
+				</div>
+				<div class="pay_mode">
+					<a href="" class="pay_mode" ui-sref="pay"  ng-click="keep()">
+						<div class="border ab">
+							支付方式
+							<div class="mode_sel"><span class="fl_l"></span><i class="iconfont icon-more"></i></div>
+						</div>
+					</a>
+				</div>
+				<div class="distribution ab">
+					<a href="" class="distribution" ui-sref="carry_info" ng-click="distribution()">
+						配送信息
+						<div class="distri_sel">
+							<p class="fl_l clearfix">
+									<span class="fl_r">{{shiptype}}</span><br><span class="distri_date ">{{shipdate}}<span class="distri_time ">{{shiptime}}</span></span>
+							</p><i class="iconfont icon-more fl_r "></i></div>
+					</a>
+				</div>
+				<div class="invoice ab bt ">
+					<a href=" " class="receipt " ui-sref="receipt_info" ng-click="keep()">
+						发票信息
+						<div class="mode_sel "><span class="fl_l">{{invoicename}}</span><i class="iconfont icon-more "></i></div>
+					</a>
+				</div>
+				<div class="note ab bt ">
+					<ul>
+						<li class="ab order_identifier_b"><span>贵司订单:</span><input type="text " class="order_identifier " placeholder="请填写贵公司内部订单编号 " /></li>
+						<li class="order_note_b"><span>备注:</span><input type="text " class="order_note " placeholder="请填写对本次交易的说明 " /></li>
+					</ul>
+				</div>
+
+				<ul class="more_cost ab bt ">
+					<li><span>商品金额</span>
+						<div class="shop_price ">¥ {{itemtotalfee}}</div>
+					</li>
+					<li><span>运费</span>
+						<div class="shop_price "><span class="fl_l char">+ </span>¥ {{postfee}}</div>
+					</li>
+					<li><span>服务费</span>
+						<div class="shop_price "><span class="fl_l char">+ </span>¥ {{servicefee}}</div>
+					</li>
+				</ul>				
+			</div>
+		</div>
+	</div>
+	<ul class="order_foot">
+		<div class="point ab bt "><span>{{receiveaddress.fulladdress}}</span></div>
+		<li class="all_price ">实付款:¥{{totalfee}}</li>
+		<li class="place_order ">
+			<a href="" class="place_order"  ng-click="submit()">提交订单</a>
+		</li>
+	</ul>
+	<loading></loading>
+	<div class="maskBlack"></div>
+	<div class="noAddressPrompt">
+		<div class="head">提示</div>
+		<div class="body ab">当前暂无收货地址，请先填写收货地址</div>
+		<div class="know" ng-click="know()">我知道了</div>
+	</div> 
+	<prompt></prompt>
+</div>

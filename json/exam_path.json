@@ -1,0 +1,51 @@
+{
+	"exam":[
+		{
+			"exam_number":1,
+			"exam_range":"单笔采购订单金额大于200",
+			"exam_content":[{
+					"exam_edit":"拒绝",
+					"exam_suggest":"不同意。。。不同意。。",
+					"exam_people":"test01",
+					"exam_date":"2017-03-01",
+					"exam_time":"15:25:21"
+				},{
+					"exam_edit":"拒绝",
+					"exam_suggest":"不同意。。。不同意。。",
+					"exam_people":"test02",
+					"exam_date":"2017-03-02",
+					"exam_time":"12:25:21"
+				},{
+					"exam_edit":"待审批",
+					"exam_suggest":"",
+					"exam_people":"test03",
+					"exam_date":"",
+					"exam_time":""
+				}]
+					
+		},{
+			"exam_number":2,
+			"exam_range":"单笔采购订单金额大于500",
+			"exam_content":[{
+					"exam_edit":"待审批",
+					"exam_suggest":"",
+					"exam_people":"test04",
+					"exam_date":"",
+					"exam_time":""
+				}]
+					
+		},{
+			"exam_number":3,
+			"exam_range":"单笔采购订单金额大于1000",
+			"exam_content":[{
+					"exam_edit":"待审批",
+					"exam_suggest":"",
+					"exam_people":"test05",
+					"exam_date":"",
+					"exam_time":""
+				}]
+					
+		}
+		
+	]
+}

@@ -1,0 +1,57 @@
+<div class="carry">
+	<div class="carry_head ab">
+		<div class="carry_back m_l" ng-click="go_back()">
+			<i class="iconfont icon-back"></i>
+		</div>
+		<div class="carry_title m_m">配送方式</div>
+	</div>
+	<div class="carry_body">
+		<div class="carry_wrap">
+			<div class="carry_body_box">
+				<div class="carry_mode">
+					<div class="mode_title">
+						<i class="iconfont icon-zhifu"></i>配送方式
+					</div>
+					<ul class="mode_sel">
+						<li ng-repeat = "item in distributes" class="date mode" distributeid = "{{item.distributeid}}" ng-class="{true:'selected',false:'unselected'}[{{item.isselected=='1'}}]" data-index="{{$index}}">{{item.distributecname}}</li>
+					</ul>
+					<div class="hint">{{distributecnote}}(服务费：{{fee}}元)</div>
+					<div class="time">
+						<div class="time_title">送货时间</div>
+						<div class="time_sel">
+							<span class="day">{{shipdate}}</span>
+							<span class="week">[{{weekname}}]</span>
+							<span class="hours">{{shiptime}}</span>
+						</div>
+						<div class="more_box"><i class="iconfont icon-more"></i></div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	
+	<div class="carry_flex">
+		<div class="chacha"></div>
+		<h5 class="carry_flex_head ab">送货时间</h5>
+		<div class="carry_flex_body">
+			<div class="week_box">
+			<ul class="myWeek">
+				<li ng-repeat="item in deliverytimes" data-index="{{$index}}" weekname="{{item.weekname}}" shipdate="{{item.shipdate}}"> 
+					<span>{{item.shipdatestr}}[{{item.weekname}}]</span>
+				</li>
+			</ul>
+			</div>
+			<ul class="myTime">
+				<li ng-repeat="item in deliverytimess" data-index="{{$index}}" fee="{{item.fee}}" shiptime="{{item.shiptime}}">
+					<span>{{item.shiptime}}  (￥{{item.fee}})</span>
+					<div class="checkmark"></div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<mask></mask>		
+	<div class="carry_foot">
+		<div class="carry_foot_box">确定</div>
+	</div>
+</div>

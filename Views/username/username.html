@@ -1,0 +1,25 @@
+<div class="r_username">
+	<div class="username_head ab">
+		<div class="username_left m_l" ng-click="cancel()"><i class="iconfont icon-back"></i></div>
+		<div class="username_title m_m">修改昵称</div>
+		<div class="username_right m_r"></div>
+	</div>
+	<div class="username_body">
+		<div class="username_wrapper">
+			<div class="username_body_box">
+				<div class="space2"></div>
+				<div class="x_username_box">
+					<div class="x_usernameTitle">新昵称</div>
+					<input type="text" placeholder="请填写昵称" class="x_username" value="{{username}}"/>
+					<div class="empty" ng-click="clear_username()"></div>
+				</div>
+				<div class="point">
+					4-16个字符,仅使用中文、字母和数字
+				</div>
+				<div class="next_box"><div class="next" ng-click="reviseUsename()">确定</div></div>
+				
+			</div>
+		</div>
+	</div>
+	<loading></loading>
+</div>

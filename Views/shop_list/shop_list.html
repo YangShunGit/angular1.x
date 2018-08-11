@@ -1,0 +1,133 @@
+<div class="shop">
+	<!--商品列表-->
+	<div class="shop_search bgr-bottom">
+		<div class="back">
+			<a href="" ng-click="myBack()">
+				<i class="iconfont icon-back"></i>
+			</a>
+		</div>
+		<a href="" class="search_div_a" ui-sref="searchPage">
+			<div class="search_div">
+				<i class="iconfont icon-sousuo"></i>{{search_key}}
+			</div>
+		</a>
+		<div class="search_category" ng-click="change_nav()">
+			<i class="iconfont icon-shenglvehao"></i>
+		</div>
+	</div>
+
+	<ysj></ysj>
+	
+	<!--商品排序-->
+	<div class="shop_sort bgr-bottom">
+		<ul>
+			<li class="default_sort_li sort_li">
+				<span>默认</span>
+			</li>
+			<li class="price_sort_li sort_li">
+				<span class="gray" price="price" by="0">价格</span>
+			</li>
+			<li class="volume_sort_li sort_li">
+				<span>销量</span>
+			</li>
+			<li class="select_list sort_li" ng-click="right=!right">
+				<span>筛选<i class="iconfont icon-shaixuan"></i></span>
+			</li>
+		</ul>
+	</div>
+	<!--菜单式商品列表 --显示-->
+	<div class="shop_box">
+		<div class="shop_wrapper">
+			<div class="shop_list_box">
+				<ul class="shop_list_ul" ng-show="ch">
+					<li class="list_li" ng-repeat="item in goods" data-id="{{item.itemid}}">
+						<div class="li_pic">
+							<img lazy-src="{{item.littleurl}}" alt="" itemid="{{item.itemid}}" eid="{{item.eid}}" colorid="{{item.colorid}}" sizeid="{{item.sizeid}}" ng-click="getData($event)"  onerror="this.src='imgs/default2.jpg'"/>
+						</div>
+						<div class="shop_info_box">
+							<div class="shop_info ab">
+								<div class="li_title" itemid="{{item.itemid}}" eid="{{item.eid}}" colorid="{{item.colorid}}" sizeid="{{item.sizeid}}" ng-click="getData($event)">{{item.itemname}}</div>
+								<div class="li_price"><span class="small">¥ </span>{{item.itprice.big_price}}.<span class="small">{{item.itprice.small_price}}</span></div>
+								<div class="li_add" itemid="{{item.itemid}}" eid="{{item.eid}}" price="{{item.price}}" ng-class="{true:'visible',false:'invisible'}[{{item.allowbuy}}=='1']" itemid ="{{item.itemid}}"></div>
+								<div class="del_add" ng-class="{true:'visible',false:'invisible'}[{{item.allowbuy}}=='1']">
+									<div class="del"><i class="iconfont icon-del" ng-click="del($event)"  ng-class="{true:'undertint',false:'original'}[{{item.orderqty}}==1]"></i>
+									</div>
+									<div class="count"><input type="tel" value="{{item.orderqty}}"/></div>
+									<div class="add"><i class="iconfont icon-add" ng-click="add($event)" ></i></div>
+
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<!--大图商品列表--隐藏-->
+				<ul class="shop_list_ul_big" ng-show="!ch">
+					<li class="list_li_big" ng-repeat="item in goods" data-id="{{item.itemid}}">
+						<div class="bg">
+							<div class="li_pic_big">
+								<a href="" ui-sref="detail_page"><img lazy-src="{{item.littleurl}}" alt=""  onerror="this.src='imgs/default2.jpg'" itemid="{{item.itemid}}" eid="{{item.eid}}" colorid="{{item.colorid}}" sizeid="{{item.sizeid}}" ng-click="getData($event)" /></a>
+							</div>
+							<div class="shop_info_big">
+								<div class="li_title_big" itemid="{{item.itemid}}" eid="{{item.eid}}" colorid="{{item.colorid}}" sizeid="{{item.sizeid}}" ng-click="getData($event)">{{item.itemname}}</div>
+								<div class="li_price_big"><span class="small">¥ </span>{{item.itprice.big_price}}.<span class="small">{{item.itprice.small_price}}</span></div>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<loadingmore></loadingmore>
+				<nomore></nomore>
+			</div>
+		</div>
+		
+	</div>
+	<!--弹出筛选页-->
+	<div class="right_page" ng-show="right">
+		<div class="right_mask" ng-click="confirm()"></div>
+		<div class="right_select">
+			<div class="right_content_box">
+				<div class="right_content">
+					<div class="right_head">
+						<div class="right_title">品牌</div>
+						<div class="all"><span class="arrow"></span></div>
+						<div class="brand_sel">{{brandText}}</div>
+					</div>
+					<div class="right_body">
+						<div class="body_show">
+							<div class="brand_list" ng-repeat="item in brands">
+								<span brandid="{{item.brandid}}">
+									<i class="sel"></i>
+									{{item.brandcname}}
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			<div class="reset_confirm">
+				<div class="reset bt">重置</div>
+				<div class="confirm" ng-click="confirm()">确定</div>
+			</div>
+		</div>
+	</div>
+	<div class="empty">
+		<div class="icon"></div>
+		<p>抱歉，没有找到该商品~</p>
+	</div>
+	<div class="cart_prompt" style="display: none;">
+		<div class="pic"><img src="imgs/detail/cart_success.png"></div>
+		<div class="txt">加入购物车成功</div>
+	</div>
+	<div class="to_top" style="display: none;">
+		<div class="pic"><img src="imgs/top.png"></div>
+	</div>
+	<div class="list_change" ng-click="changeList()">
+		<div class="pic" ng-show="!ch"><img src="imgs/list.png"></div>
+		<div class="pic" ng-show="ch"><img src="imgs/big_picture.png"></div>
+	</div>
+	<div class="page_prompt" style="display: none;">
+		<div class="txt"><span>{{page}}</span>/{{all_page}}</div>
+	</div>
+	<prompt></prompt>
+	<loading></loading>
+</div>

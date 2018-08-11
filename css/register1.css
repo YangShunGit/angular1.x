@@ -1,0 +1,208 @@
+.register1 {
+	width: 100%;
+	height: 100%;
+	background: #f1f2f6;
+	position: relative;
+	overflow: hidden;
+}
+
+.register1 input {
+	outline: none;
+	vertical-align: middle;
+	line-height: 18px;
+}
+
+.register1 input::-webkit-input-placeholder {
+	color: #9a9a9a;
+	font-size: 14px;
+}
+
+.register1 .register1_back,
+.register1 .register1_title {
+	float: left;
+}
+
+.register1 .register1_head {
+	width: 100%;
+	height: 45px;
+	background: #ffffff;
+	box-sizing: border-box;
+	position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 101;
+}
+
+.register1 .register1_back {
+	width: 30%;
+	height: 44px;
+	line-height: 44px;
+	box-sizing: border-box;
+}
+
+.register1 .icon-back {
+	padding: 14px 8px 14px 14px;
+	color: #656b70;
+}
+
+.register1 .register1_head .close {
+	padding: 12px 6px;
+}
+
+.register1 .register1_title {
+	font-size: 17px;
+	width: 40%;
+	height: 44px;
+	line-height: 44px;
+	color: #3f464c;
+	text-align: center;
+}
+.register1 .register1_body{
+	width:100%;
+	height:100%;
+	box-sizing: border-box;
+	padding-top:45px;
+}
+.register1 .register1_wrapper{
+	width:100%;
+	height:100%;
+	position: relative;
+	overflow: hidden;
+}
+.register1 .register1_iscroll{
+	width:100%;
+	min-height:101%;
+}
+.register1 .content{
+	margin-top:10px;
+}
+.register1 .user_box,
+.register1 .places_box,
+.register1 .address_box,
+.register1 .person_box,
+.register1 .mobile_box,
+.register1 .email_box,
+.register1 .tel_box{
+	width:100%;
+	height:50px;
+	border:none;
+	font-size:15px;
+	line-height:50px;
+	color:#3c454c;
+	position: relative;
+	box-sizing:border-box;
+	background:white;
+}
+.register1 .user_box,
+.register1 .address_box,
+.register1 .tel_box{
+	padding:16px 30px 16px 92px;
+}
+
+.register1 .places_box,
+.register1 .person_box,
+.register1 .mobile_box{
+	padding:16px 30px 16px 105px;
+}
+.register1 .email_box{
+	padding:16px 30px 16px 61px;
+}
+.register1 .set_box:last {
+	border: none;
+}
+
+.register1 .user_title,
+.register1 .places_title,
+.register1 .address_title,
+.register1 .person_title,
+.register1 .mobile_title,
+.register1 .email_title,
+.register1 .tel_title{
+	height:18px;
+	font-size: 15px;
+	line-height:18px;
+	display: block;
+	position: absolute;
+	top:16px;
+	left:12px;
+}
+.register1 .user_title,
+.register1 .address_title,
+.register1 .tel_title{
+	width:70px;
+}
+.register1 .places_title,
+.register1 .person_title,
+.register1 .mobile_title{
+	width:87px;
+}
+.register1 .email_title{
+	width:60px;
+}
+.register1 .set_input {
+	width:100%;
+	font-size: 15px;
+	height:18px;
+	line-height: 18px;
+	border:none;
+	outline:none;
+	display: block;
+}
+
+.register1 .empty,.register1 .selIcon{
+	width:35px;
+	height:50px;
+	line-height: 50px;
+	text-align: right;
+	box-sizing: border-box;
+	padding-right:12px;
+	position: absolute;
+	top:0;
+	right:0;
+}
+
+.register1 .identify_img {
+	height: 30px;
+	margin: 10px 0;
+	border-left: 1px solid #bbbbbb;
+}
+
+.register1 .identify_img img {
+	width: 100%;
+}
+.register1 .next{
+	width:100%;
+	height:50px;
+	box-sizing: border-box;
+	padding:0 12px;
+}
+
+.register1 .next_button {
+	width: 100%;
+	margin-top: 12px;
+	height: 40px;
+	border: none;
+	background: #f52f2c;
+	color: #fff;
+	border-radius: 3px;
+	font-size:14px
+}
+
+.register1 .tips {
+	background: #000000;
+	opacity: 0.8;
+	width: 80%;
+	height: 40px;
+	color: #FFFFFF;
+	font-size: 14px;
+	text-align: center;
+	line-height: 40px;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	border-radius: 3px;
+	box-sizing: border-box;
+	}

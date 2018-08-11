@@ -1,0 +1,162 @@
+.search{
+	width:100%;
+	height:100%;
+	background:white;
+	position:relative;
+}
+.search_head{
+	width:100%;
+	height:50px;
+	position:absolute;
+	top:0;
+	left:0;
+}
+.search_back{
+	width:20%;
+	height:45px;
+}
+.search_input{
+	width:78%;
+	float: left;
+	height:40px;
+	padding:5px 0 5px 0;
+	box-sizing:border-box;
+	position:relative;
+}
+input::-webkit-input-placeholder{
+	color:#b6b9c0;
+	height:30px;
+	font-size:12px;
+	line-height:16px;
+}
+.search_input input{
+	width:100%;
+	height:30px;
+	font-size:13px;
+	box-sizing:border-box;
+	border:none;
+	outline:none;
+	background:#f1f2f6;
+	text-indent:27px;
+	border-radius:3px;
+}
+.search_back,.search_go{
+	height:40px;
+	line-height:40px;
+	text-align:center;
+	float: left;
+	font-size:14px;
+}
+.search_back{
+	width:10%;
+}
+.search_go{
+	width:12%;
+}
+.search_go a{
+	color:#88898d ;
+}
+.search_back a{
+	color:#656b70;
+}
+.search_body{
+	width:100%;
+	height:100%;
+	box-sizing:border-box;
+	padding-top:40px;
+}
+.search_wrapper{
+	width:100%;
+	height:100%;
+	position:relative;
+	overflow: hidden;
+}
+
+.search_hot{
+	width:100%;
+	height:70px;
+	background:white;
+}
+.hot_title,.history_title{
+	width:100%;
+	font-size:16px;
+	box-sizing:border-box;
+	padding-left:5px;
+	font-size:16px;
+	height:40px;
+	line-height:40px;
+	box-sizing:border-box;
+	padding-left:10px;
+}
+.hot_list{
+	height:30px;
+}
+.search_space{
+	width:100%;
+	height:10px;
+	background:#f3f3f3;
+}
+.history_search{
+	width:100%;
+}
+
+.hot_list_box{
+	width:100%;
+	height:30px;
+	overflow-x:scroll;
+}
+.hot_list{
+	width:140%;
+	overflow: hidden;
+}
+.history_list{
+	width:100%;
+	box-sizing:border-box;
+	padding:0 10px;
+	overflow: hidden;
+	
+}
+
+.list_li{
+	height:20px;
+	line-height:20px;
+	padding:5px 10px;
+	float: left;
+	font-size:12px;
+	background:#f1f2f6;
+	margin-right:10px;
+	margin-bottom:5px;
+	color:#222327;
+	border-radius:3px;
+}
+.hot_list .list_li:first-child{
+	margin-left:10px;	
+}
+.history_list .list_li{
+	margin-bottom:10px;
+}
+.search_space{
+	width:100%;
+	height:10px;
+	background:##f1f2f6;
+}
+.clear_search{
+	width:60%;
+	height:40px;
+	text-align:center;
+	line-height:40px;
+	margin:20px auto;
+	border:1px solid #686868;
+	border-radius:3px;
+	color:#686868;
+}
+.icon-p-delet{
+	padding-right:10px;
+}
+.icon-sousuo{
+	position:absolute;
+	top:13px;
+	left:9px;
+	color:#b3b8be;
+}
+

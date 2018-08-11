@@ -1,0 +1,199 @@
+.submit{
+	width:100%;
+	height:100%;
+	background:#f1f2f6;
+	position:relative;
+	overflow: hidden;
+}
+.submit_head{
+	width:100%;
+	height:45px;
+	position:absolute;
+	top:0;
+	left:0;
+	background:white;
+	z-index: 101;
+}
+.submit_body{
+	width:100%;
+	height:100%;
+	box-sizing:border-box;
+	padding-top:45px;
+}
+.submit_wrapper{
+	width:100%;
+	height:100%;
+}
+.submit_body_box{
+	width:100%;
+	min-height:101%;
+	
+}
+
+
+/*------head--------*/
+.submit_content_box{
+	background:white;
+}
+.submit_content{
+	width:250px;
+	height:200px;
+	margin:0 auto;
+}
+.submit_up{
+	width:150px;
+	height:80px;
+
+	padding-top:35px;
+	padding-left:100px;
+	position: relative;
+}
+.submit .pay_mode,.submit .order_money{
+	width:200px;
+	font-size: 14px;
+	height:30px;
+	line-height:30px;
+}
+.submit_up span{
+	color:#f82f28;
+}
+.submit_pic{
+	width:60px;
+	height:60px;
+	position:absolute;
+	top:30px;
+	left:20px;
+}
+.submit_pic img{
+	width:100%;
+}
+.submit_ul{
+	margin: 0 auto;
+}
+.submit_ul li{
+	float: left;
+	width:100px;
+	height:40px;
+	border:1px solid #666666;
+	border-radius:3px;
+	text-align:center;
+	line-height:40px;
+	color:#232325;
+}
+.submit_ul li:first-child{
+	margin-right:40px;
+}
+.submit .m_l{
+	font-size:14px;
+}
+.submit .exam {
+	background: #FFFFFF;
+	font-size: 13px;
+	color: #111113;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+.submit .exam .title {
+	font-size: 15px;
+	margin-left: 12px;
+	height: 50px;
+	line-height: 50px;
+}
+
+.submit .exam .title .change {
+	font-size: 12px;
+	padding-right: 12px;
+	color: #bfbfbf;
+}
+
+.submit .exam .arrow {
+	background: url(../imgs/icon.png);
+	background-position:  -410px -180px;;
+	background-size: 500px 677px;
+	width: 15px;
+	height: 8px;
+	display: inline-block;
+	margin-left: 5px;
+}
+
+.submit .exam .progress {
+	box-sizing: border-box;
+	padding: 0 12px;
+}
+
+.submit .exam li {
+	box-sizing: border-box;
+}
+
+.submit .exam .nth {
+	display: inline;
+	width: 13px;
+	padding-top: 17px
+}
+
+.submit .exam .nth span {
+	display: block;
+	color: #FFFFFF;
+	font-size: 9px;
+	background: #F52F2C;
+	width: 13px;
+	height: 13px;
+	border-radius: 100%;
+	text-align: center;
+	line-height: 13px;
+}
+.submit .exam .nth span.nor{background: #bfbfbf}
+.submit .exam .r {
+	width: 100%;
+	padding: 17px 0 0 28px;
+	box-sizing: border-box;
+}
+
+.submit .exam .type {
+	line-height: 13px;
+}
+
+.submit .exam .r .advice{
+	padding-bottom: 10px;
+}
+.submit .exam .r ul{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.submit .exam .r .advice {
+	line-height: 20px;
+}
+
+.submit .exam .advice .done {
+	color: #F52F2C;
+}
+
+.submit .exam .approver,
+.submit .exam .time {
+	
+	color: #898989;
+}
+.submit .exam .time {
+	line-height:25px;
+}
+
+
+
+.submit .bpms_index{
+	position: absolute;
+	top:16px;
+	left:0;
+	color: #FFFFFF;
+    font-size: 9px;
+    background: #898989;
+    width: 13px;
+    height: 13px;
+    border-radius: 100%;
+    text-align: center;
+    line-height: 13px;
+}
+.submit .progress>ul>li{
+	position: relative;
+}

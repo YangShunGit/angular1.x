@@ -1,0 +1,55 @@
+<div class="receipt">
+	<div class="receipt_head ab">
+		<div class="receipt_back">
+			<a href="" ng-click="myBack()"><i class="iconfont icon-back"></i></a>
+		</div>
+		<div class="receipt_title">发票信息</div>
+	</div>
+	<div class="receipt_body">
+		<div class="receipt_info_wrapper">
+			<div class="receipt_body_box">
+				<div class="receipt_mode">
+					<div class="mode_title">
+						发票类型
+					</div>
+					<ul class="mode_sel">
+						<li class="no_receipt">无需发票</li>
+						<li class="normal_receipt">普通发票</li>
+						<li class="add_receipt">增值税发票</li>
+					</ul>
+				</div>
+				<div class="common" style="display: none;">
+					<div class="common_title">
+						发票抬头
+					</div>
+					<div class="common_content">
+						<input type="text" placeholder="请填写单位名称" class="receipt_name" />
+						<input type="text" placeholder="请在此填写纳税人识别号" class="receipt_code" />
+					</div>
+				</div>
+				<div class="appreciation" style="display: none;">
+					<div class="appre_title ab">
+						填写信息
+					</div>
+					<ul class="appre_ul">
+						<li class="ab clearfix"><span>单位名称：</span><input type="text" placeholder="请填写单位名称" class="receipt_name"  /></li>
+						<li class="ab clearfix"><span>纳税人识别码：</span><input type="text" placeholder="请填写纳税人识别码" class="receipt_code"  /></li>
+						<li class="ab clearfix"><span>注册地址：</span><input type="text" placeholder="请填写单位注册地址" class="receipt_address"  /></li>
+						<li class="ab clearfix"><span>注册电话：</span><input type="text" placeholder="请填写单位注册电话" class="receipt_number"  /></li>
+						<li class="ab clearfix"><span>开户银行：</span><input type="text" placeholder="请填写单位开户银行" class="receipt_bank"  /></li>
+						<li class="clearfix"><span>银行账户：</span><input type="text" placeholder="请填写单位银行账户" class="receipt_account" /></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="receipt_foot">
+		<div class="receipt_foot_box">确定</div>
+	</div>
+	<div class="prompt" style="display: none;">
+		<div class="pic"><img src="imgs/order/exclamation.png"></div>
+		<div class="txt">请输入发票抬头</div>
+	</div>
+	<confirm></confirm>
+	<loading></loading>
+</div>

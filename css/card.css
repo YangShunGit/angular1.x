@@ -1,0 +1,29 @@
+.card{
+	width:100%;
+	height:100%;
+}
+.card_head{
+	width:100%;
+	height:45px;
+	position:fixed;
+	top:0;
+	left:0;
+	background:white;
+	z-index: 10;
+}
+
+.card_body{
+	box-sizing: border-box;
+	width:100%;
+	height:100%;
+	padding-top:45px;
+	
+}
+.card_wrapper{
+	width:100%;
+	height:100%;
+	position:relative;
+	overflow: hidden;
+}
+
+.card .card_body_box img{width: 100%; display: block; padding-top: 10px;}

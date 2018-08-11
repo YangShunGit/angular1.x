@@ -1,0 +1,82 @@
+{
+  "data":[
+              {
+              "goods_url":"imgs/repair/goods0.jpg",
+              "goods_title":"闪迪（SanDisk）USB3.0金属U盘酷铄（CZ73）32GB",
+              "goods_price":"9.98",
+              "goods_id":"08100001",
+              "goods_count":1,
+              "goods_sel":false,
+              "goods_edit":false,
+              "goods_color":"黑色",
+              "goods_model":"UM-151",
+              "goods_colors":["黑色","红色"],
+              "goods_models":["UM-151","ET-120"],
+              "goods_type":"名片制作",
+              "goods_collect":false
+              },
+              {
+              "goods_url":"imgs/repair/goods1.jpg",
+              "goods_title":"得力/deli LED灯立体浮雕地球仪/标准教学 高清中英文对照 内显洋流图行政图地形图 送放大镜（ Φ 30cm）",
+              "goods_price":"19.90",
+              "goods_id":"08100002",
+              "goods_count":1,
+              "goods_sel":false,
+              "goods_edit":false,
+              "goods_color":"黑色",
+              "goods_model":"UM-151",
+              "goods_colors":["黑色","红色"],
+              "goods_models":["UM-151","ET-120"],
+              "goods_type":"",
+              "goods_collect":false
+              },
+              {
+              "goods_url":"imgs/repair/goods2.jpg",
+              "goods_title":"NIKE耐克 篮球 室外水泥地蓝球 7号防滑耐磨篮球BB0509-801 送全套赠品",
+              "goods_price":"29.90",
+              "goods_id":"08100003",
+              "goods_count":1,
+              "goods_sel":false,
+              "goods_edit":false,
+              "goods_color":"黑色",
+              "goods_model":"UM-151",
+              "goods_colors":["黑色","红色"],
+              "goods_models":["UM-151","ET-120"],
+              "goods_type":"制服回收",
+              "goods_collect":false
+              },
+              {
+              "goods_url":"imgs/repair/goods3.jpg",
+              "goods_title":"AMUSI阿姆斯 ",
+              "goods_price":"39.90",
+              "goods_id":"08100004",
+              "goods_count":1,
+              "goods_sel":false,
+              "goods_edit":false,
+              "goods_color":"黑色",
+              "goods_model":"UM-151",
+              "goods_colors":["黑色","红色"],
+              "goods_models":["UM-151","ET-120"],
+              "goods_type":"制服领取",
+              "goods_collect":false
+              },
+              {
+              "goods_url":"imgs/repair/goods4.jpg",
+              "goods_title":"牛皮纸封面学生课堂学科本课堂笔记本 英语本学生作业本子套装文具",
+              "goods_price":"49.90",
+              "goods_id":"08100005",
+              "goods_count":1,
+              "goods_sel":false,
+              "goods_edit":false,
+              "goods_color":"黑色",
+              "goods_model":"UM-151",
+              "goods_colors":["黑色","红色"],
+              "goods_models":["UM-151","ET-120"],
+              "goods_type":"",
+              "goods_collect":false
+              }
+  
+  
+  ]
+
+}

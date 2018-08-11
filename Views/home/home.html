@@ -1,0 +1,138 @@
+<!-------------搜索框-------------------->
+<div class="home_search">
+	<div class="search_bg"></div>
+	<div class="search_category">
+		<a ng-click="qrCode()">
+			<div class="search_category_text">
+				<div><i class="iconfont icon-scan"></i></div>
+				<div>扫一扫</div>
+			</div>
+		</a>
+	</div>
+	<a href="" class="search_div_a" ui-sref="searchPage">
+		<div class="search_div">
+			<i class="iconfont icon-sousou"></i> 在这里搜索你要找的商品
+		</div>
+	</a>
+	<div class="search_category">
+		<a href="" ui-sref="purchase_words">
+			<div class="search_category_text">
+				<div><i class="iconfont icon-liuyan2"></i></div>
+				<div>留言</div>
+			</div>
+		</a>
+	</div>
+</div>
+
+<div class="home_box">
+	<div class="home_wrapper">
+		<div id="home" class="mescroll">
+			<div class="home">
+				<!--下拉刷新-->
+				<div class="down_fresh_box" style="display: none;">
+					<span><img src="imgs/loading.gif" alt="" class="down_fresh_gif" onerror="this.src='imgs/default2.jpg'"/></span>
+					<span class="down_fresh">下拉刷新</span>
+				</div>
+				<!------------swiper轮播图--------------->
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide" ng-repeat="banner in items">
+							<a href="{{banner.hoturl}}"><img ng-src="{{banner.largeurl}}" alt=""  onerror="this.src='imgs/default2.jpg'"/></a>
+						</div>
+					</div>
+					<!-- 如果需要分页器 -->
+					<div class="swiper-pagination"></div>
+				</div>
+
+				<!----------------菜单列表----------------->
+				<div class="menu">
+					<ul class="menu_list">
+						<li class="menu_li">
+							<a href=""><img src="imgs/menu_icon/index_ent_0@2x.png" alt="" onerror="this.src='imgs/default2.jpg'"/>
+								<p class="menu_p">专属商品</p>
+							</a>
+						</li>
+						<li class="menu_li">
+							<a href=""><img src="imgs/menu_icon/index_ent_1@2x.png" alt="" onerror="this.src='imgs/default2.jpg'"/>
+								<p class="menu_p">非专属商品</p>
+							</a>
+						</li>
+						<li class="menu_li">
+							<a href="" ui-sref="card"><img src="imgs/menu_icon/index_ent_2@2x.png" alt="" onerror="this.src='imgs/default2.jpg'"/>
+								<p class="menu_p">名片制作</p>
+							</a>
+						</li>
+						<li class="menu_li">
+							<a href="" ui-sref="kac"><img src="imgs/menu_icon/index_ent_3@2x.png" alt="" onerror="this.src='imgs/default2.jpg'"/>
+								<p class="menu_p">大客户合作</p>
+							</a>
+						</li>
+						<li class="menu_li">
+							<a href="" ng-click="uniform()"><img src="imgs/menu_icon/index_ent_4@2x.png" alt="" onerror="this.src='imgs/default2.jpg'" />
+								<p class="menu_p">制服管理</p>
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<!-------------------排行榜--------------->
+
+				<div class="rank">
+					<ul class="type_two">
+						<li id="product_rank" ng-click="r_product()">
+							<a href="" ui-sref="shop_list"><img data-original="" class="lazy" src="imgs/sDefault.jpg"  onerror="this.src='imgs/sDefault.jpg'"/></a>
+						</li>
+					</ul>
+					<ul class="type_three">
+						<li id="product_rank" ng-click="r_product()">
+							<a href="" ui-sref="shop_list"><img data-original="" class="lazy"  onerror="this.src='imgs/sDefault.jpg'"/></a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="hot_category_box">
+					<h3 class="hot_category text-gradient" data-text="热门分类">热门分类</h3>
+					<ul class="hot_category_list">
+						<li ng-repeat="items in hg track by $index" data-groupid="{{items.groupid}}" data-title="{{items.groupcname}}" ng-click="go_shop_list()" repeat-finish="ref()" style="border:0">
+							<div class="title">{{items.groupcname}}</div>
+							<div class="img_box" border="0"><img lazy-src="{{items.pictureurl}}" alt="" onerror="this.src='imgs/default2.jpg'" border="0"/></div>
+						</li>
+					</ul>
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+	<div id="tab">
+		<div class="tab_table tab_table1">
+			<a href="" ui-sref="home" class="tab_a"><img src="imgs/tabbar/tab_icon_0_sel@3x.png" alt="" /></a>
+			<a ui-sref='category' href="" class="tab_a tab_category"><img src="imgs/tabbar/tab_icon_1_nor@3x.png" alt="" ng-show="!cate_show" />
+			</a>
+			<a href="" ui-sref='cart' class="tab_a">
+				<div>
+					<img src="imgs/tabbar/tab_icon_2_nor@3x.png" alt="" ng-show="!cart_show" />
+					<p>{{qtytotal}}</p>
+				</div>
+			</a>
+			<a href="" ui-sref='mine' class="tab_a"><img src="imgs/tabbar/tab_icon_3_nor@3x.png" alt="" ng-show="!mine_show" />
+			</a>
+		</div>
+		<div class="tab_table tab_table2">
+			<a href="" ui-sref="home" class="tab_a"><img src="imgs/tabbar/tab_icon_0_sel@3x.png" alt="" /></a>
+			<a ui-sref='categoryka' href="" class="tab_a tab_categoryka"><img src="imgs/tabbar/tab_icon_4_nor@3x.png" alt="" ng-show="!cate_show" />
+			</a>
+			<a ui-sref='category' href="" class="tab_a tab_category"><img src="imgs/tabbar/tab_icon_1_nor@3x.png" alt="" ng-show="!cate_show" />
+			</a>
+			<a href="" ui-sref='cart' class="tab_a">
+				<div>
+					<img src="imgs/tabbar/tab_icon_2_nor@3x.png" alt="" ng-show="!cart_show" />
+					<p>{{qtytotal}}</p>
+				</div>
+			</a>
+			<a href="" ui-sref='mine' class="tab_a"><img src="imgs/tabbar/tab_icon_3_nor@3x.png" alt="" ng-show="!mine_show" />
+			</a>
+		</div>
+	</div>
+</div>

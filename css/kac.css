@@ -1,0 +1,126 @@
+.kac {
+	height: 100%;
+}
+
+.kac_body {
+	width: 100%;
+	height: 100%;
+	padding-top: 45px;
+	box-sizing: border-box;
+}
+
+#kac_wrapper {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+
+/*.kac_box{position: relative;top: 31px;}*/
+
+.kac .fl_l {
+	float: left;
+}
+
+.kac .fl_r {
+	float: right
+}
+
+.kac .navBar {
+	width: 100%;
+	height: 45px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	color: #3C444B;
+	background: #FFFFFF;
+}
+
+.kac .icon-arr-up {
+	font-size: 24px;
+	color: #000000;
+	z-index: 10;
+	opacity: 0.7;
+}
+
+.kac .upper img {
+	width: 100%;
+	display: block;
+}
+
+.kac .lower {
+	width: 100%;
+}
+
+.kac .lower .mode {
+	position: relative;
+	top: -31px;
+	margin: 0 10%;
+}
+
+.kac .lower .mode img {
+	width: 100%;
+	display: block;
+}
+
+.kac .lower .mode li {
+	background: #FFFFFF;
+	margin-top: 15px;
+	height: 85px;
+}
+
+.kac .lower .mode li .content {
+	height: 63px;
+	line-height: 40px;
+	box-sizing: border-box;
+	padding: 23px 13px 0 8px;
+}
+
+.kac .lower .mode li .img {
+	background: url(../imgs/icon.png) no-repeat -10px -447px;
+	width: 40px;
+	height: 40px;
+	background-size: 500px 667px;
+	margin-right: 7px;
+}
+
+.kac .lower .mode li .txt {
+	font-size: 15px;
+	color: #050505;
+}
+
+.kac .lower .mode li .btn {
+	border-radius: 2px;
+	font-size: 10px;
+	background: #2db3e6;
+	width: 58px;
+	height: 20px;
+	line-height: 20px;
+	color: #FFFFFF;
+	margin-top: 10px;
+	text-align: center;
+}
+.kac .lower .mode li .btn:before {
+	width: 0;
+}
+.kac .lower .mode .survice .img {
+	background: url(../imgs/icon.png) no-repeat -63px -447px;
+	background-size: 500px 667px;
+}
+
+.kac .lower .mode .team .img {
+	background: url(../imgs/icon.png) no-repeat -117px -447px;
+	background-size: 500px 667px;
+}
+
+.kac .lower .mode .purchase .img {
+	background: url(../imgs/icon.png) no-repeat -170px -447px;
+	background-size: 500px 667px;
+}
+
+.kac .lower .mode .exchanged .img {
+	background: url(../imgs/icon.png) no-repeat -223px -447px;
+	background-size: 500px 667px;
+}

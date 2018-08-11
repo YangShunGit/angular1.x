@@ -1,0 +1,60 @@
+.issue_detail{
+	width:100%;
+	height:100%;
+	background:white;
+}
+.issue_detail .place_head{
+	width:100%;
+	height:45px;
+	box-sizing: border-box;
+}
+.issue_detail .place_back{
+	width:30%;
+	height:44px;
+	line-height:44px;
+	box-sizing: border-box;
+	padding-left:12px;
+}
+.issue_detail .icon-back{
+	padding-right:12px;
+	color: #656b70;
+}
+.icon-shenglvehao{
+	font-size:20px;
+}
+.issue_detail .place_right{
+	color: #88898d;
+	font-size:14px;
+	float: right;
+	height:44px;
+	line-height:44px;
+	width: 44px;
+	text-align: center;
+}
+.issue_detail .place_title{
+	font-size:17px;
+	width:40%;
+	height:44px;
+	line-height:44px;
+	color:#3C444B;
+	text-align:center;
+}
+.issue_detail .place_back,.issue_detail .place_title{
+	float: left;
+}
+.issue_detail .container{
+	width:100%;
+	height:100%;
+	box-sizing: border-box;
+	padding-top:45px;
+	overflow: hidden;
+	position: relative;
+}
+.issue_detail .iscroll{
+	height:101%;
+}
+.issue_detail .content img{width: 100%;}
+.issue_detail .close{
+	color:#656b70;
+	font-size:14px;
+}

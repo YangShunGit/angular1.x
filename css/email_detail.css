@@ -1,0 +1,722 @@
+
+.email_detail {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.email_detail .look_head {
+	width: 100%;
+	height: 45px;
+	box-sizing: border-box;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #FFFFFF;
+	z-index:100;
+}
+.email_detail .look_title {
+	height: 44px;
+	line-height: 44px;
+	text-align: center;
+	color: #3C444B;
+	font-size: 17px;
+}
+.email_detail .look_body {
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	padding-top: 45px;
+}
+
+.email_detail .look_wrapper {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+.email_detail .look_body_box{
+	width: 100%;
+	height: auto;
+	min-height:101%;
+	padding-bottom: 50px;
+	box-sizing: border-box;
+}
+
+
+.email_detail .carry_info,
+.email_detail .point {
+	font-size: 14px;
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	box-sizing: border-box;
+	padding: 0 12px;
+	background: white;
+}
+.email_detail .point {
+	margin-bottom: 10px;	
+}
+.email_detail .unit_order{
+	width: 100%;
+	box-sizing: border-box;
+	padding: 0 0 0 12px;
+	background: white;
+}
+.email_detail .unit_order_box{
+	font-size: 14px;
+	width:100%;
+	height: 50px;
+	line-height: 50px;
+}
+.email_detail .status,
+.email_detail .pay_mode,
+.email_detail .carry_mode,
+.email_detail .add_receipt {
+	height: 50px;
+	line-height: 50px;
+	float: right;
+}
+.email_detail .order_number{
+	font-size:14px;
+	padding-left:12px;
+	height: 50px;
+	line-height: 50px;
+	box-sizing:border-box;
+	background:white;
+}
+.email_detail .order_number_box{
+	width:100%;
+	height:50px;	
+}
+.email_detail .status {
+	padding-right:10px;
+	color: #f52f2c;
+}
+.email_detail .think,
+.email_detail .address {
+	width: 100%;
+	box-sizing: border-box;
+	padding: 20px 12px 10px 38px;
+	margin-bottom: 10px;
+	vertical-align: middle;
+	background: white;
+}
+.email_detail .think .up .distribution{width: 90%;display: block;}
+.email_detail .think .up .icon-more{line-height: 19px;color: #bebebe;}
+.email_detail .address {
+	padding-top: 20px;
+	position: relative;
+}
+
+.email_detail .think .up,
+.email_detail .address .up {
+	font-size: 14px;
+	width: 100%;
+}
+.email_detail .address .up span{padding-right: 10px;}
+.email_detail .think .down,
+.email_detail .address .down {
+	font-size: 12px;
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	color: #848589;
+}
+
+.email_detail .exam {
+	background: #FFFFFF;
+	font-size: 13px;
+	color: #111113;
+	margin-bottom: 10px;
+}
+
+.email_detail .exam .title {
+	font-size: 15px;
+	margin-left: 12px;
+	height: 50px;
+	line-height: 50px;
+}
+
+.email_detail .exam .title .change {
+	font-size: 12px;
+	padding-right: 12px;
+	color: #bfbfbf;
+}
+
+.email_detail .exam .arrow {
+	background: url(../imgs/icon2.png);
+	background-position:  -410px -180px;;
+	background-size: 500px 677px;
+	width: 15px;
+	height: 8px;
+	display: inline-block;
+	margin-left: 5px;
+}
+
+.email_detail .exam .progress {
+	box-sizing: border-box;
+	padding: 0 12px;
+}
+
+.email_detail .exam li {
+	box-sizing: border-box;
+}
+
+.email_detail .exam .nth {
+	display: inline;
+	width: 13px;
+	padding-top: 17px
+}
+
+.email_detail .exam .nth span {
+	display: block;
+	color: #FFFFFF;
+	font-size: 9px;
+	background: #F52F2C;
+	width: 13px;
+	height: 13px;
+	border-radius: 100%;
+	text-align: center;
+	line-height: 13px;
+}
+.email_detail .exam .nth span.nor{background: #bfbfbf}
+.email_detail .exam .r {
+	width: 100%;
+	padding: 17px 0 0 28px;
+	box-sizing: border-box;
+}
+
+.email_detail .exam .type {
+	line-height: 13px;
+}
+
+.email_detail .exam .r .advice{
+	padding-bottom: 10px;
+}
+.email_detail .exam .r ul{
+	padding-top: 10px;
+}
+
+.email_detail .exam .r .advice {
+	line-height: 20px;
+}
+
+.email_detail .exam .advice .done {
+	color: #F52F2C;
+}
+
+.email_detail .exam .approver,
+.email_detail .exam .time {
+	
+	color: #898989;
+}
+.email_detail .exam .time {
+	line-height:25px;
+}
+.email_detail .carry_info .day {
+	float: right;
+	padding-left:10px;
+}
+.email_detail .mar_b{
+	height:10px;
+	width:100%;
+}
+.email_detail .carry_info .carry_time {
+	padding-right: 10px;
+}
+.email_detail .truck{
+	width:18px;
+	height:18px;
+	background:url(../imgs/icon2.png) no-repeat;
+	background-size:500px 667px;
+	background-position:-183px -289px;
+	position:absolute;
+	left:12px;
+	top:22px;
+}
+.email_detail .location{
+	width:18px;
+	height:18px;
+	background: url(../imgs/icon2.png) 0 -103px no-repeat;
+	background-size: 30px 150px;
+	position: absolute;
+	left: 12px;
+	top: 22px;
+}
+.email_detail .think .down .day {
+	padding-right: 10px;
+}
+
+.email_detail .shop_list {
+	margin-bottom: 10px;
+}
+
+.email_detail .shop_list ul {
+	background: white;
+}
+.email_detail ul #list_li{
+	display: none;
+}
+.email_detail .del_shop{
+	background: #ffffff;
+	margin: 10px 0;
+	display: none;
+}
+.email_detail .list_ul{
+	overflow: hidden;
+}
+.email_detail .list_ul .list_li:last-child .space{
+	display: none;
+}
+.email_detail .list_li {
+	width: 100%;
+	height: 105px;
+	background: #f8f8f8;
+	position: relative;
+}
+
+.email_detail .space {
+	width: 100%;
+	height: 3px;
+	background: #fff;
+}
+
+.email_detail .shop_url {
+	margin: 15px 10px 0 12px;
+	width: 70px;
+	height: 70px;
+	float: left;
+}
+.email_detail .shop_url a{
+	display: block;
+	width:70px;
+	height:70px;	
+}
+.email_detail .shop_url img {
+	width: 70px;
+	height: 70px;
+}
+.email_detail .shop_url>.ab{
+	width:70px;
+	height:70px;
+}
+
+.email_detail .para {
+	position: relative;
+	width: 100%;
+	height: 100px;
+	box-sizing: border-box;
+	padding: 10px 12px 0 90px;
+}
+.email_detail .cart_foot{
+	width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    background: white;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+	position: fixed;
+	}
+.email_detail .cart_foot .foot_right{
+	text-align:center;
+	line-height: 50px;
+	color: #FFFFFF;
+	float: right;
+	width: 30%;
+	height: 50px;
+}
+.email_detail .cart_foot .pass{
+	background:#f1f2f6 ;
+}
+.email_detail .cart_foot .refuse{
+	background:#f1f2f6 ;
+}
+.email_detail .shop_title {
+	font-size: 14px;
+	height: 25px;
+	line-height: 25px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.email_detail .shop_model {
+	font-size: 12px;
+	color: #848589;
+	overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    padding-right: 28px;
+}
+
+.email_detail .shop_model span {
+	padding-right: 5px;
+}
+.email_detail .shop_price {
+	font-size: 12px;
+	position: absolute;
+	bottom: 15px;
+	left: 90px;
+}
+.email_detail .list_ul .del_it{
+	background:url(../imgs/icon2.png) 0 0 no-repeat ;
+    background-size: 30px 150px;
+    width: 16px;
+    height: 16px;
+    float: right;
+    margin:4px 0 0 12px;
+    }
+.email_detail .list_ul .rec_it{
+	background:url(../imgs/icon2.png) no-repeat 0 -25px;
+    background-size:30px 150px;
+    width: 20px;
+    height: 16px;
+    float: right;
+    margin:4px 0 0 12px;
+    }
+.email_detail .li_add {
+    width: 78px;
+    height: 20px;
+    position: absolute;
+    top: 68px;
+    right: 12px;
+    border: 1px solid #d0d0d0;
+    border-radius: 3px;
+    }
+.email_detail  .li_add .del,.email_detail .li_add .add{
+ 	width: 23px;
+ 	height: 20px;
+ 	float: left;
+ 	text-align: center;
+ }
+.email_detail  .li_add .del i{
+ 	background: url(../imgs/icon2.png) 0 -123px no-repeat;
+ 	background-size: 30px 150px;
+ 	width: 10px;
+ 	height: 10px;
+ 	display: inline-block;
+ 	margin: 5px 6px;
+ }
+.email_detail   .li_add .add i{
+ 	background: url(../imgs/icon2.png) -20px -123px no-repeat;
+ 	background-size: 30px 150px;
+ 	width: 10px;
+ 	height: 10px;
+ 	display: inline-block;
+ 	margin: 5px 6px;
+ }
+.email_detail     .count_input {
+    float: left;
+    width: 30px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    border-left: 1px solid #d0d0d0;
+    border-right: 1px solid #d0d0d0;
+    }
+ .email_detail    .count_input input{
+    	border: none;
+    	width: 30px;
+    	text-align: center;
+    	outline: none;
+    }
+.email_detail     .icon-del,.email_detail  .icon-add {
+    font-size: 20px;
+    line-height: 20px;
+    }
+.email_detail .remainder {
+	height: 40px;
+	font-size: 12px;
+	color: #6a6a6a;
+	text-align: center;
+	line-height: 40px;
+	background: #f8f8f8;
+}
+.email_detail .remainder .icon-xia{color: #bfbfbf; font-size: 12px; padding-left: 5px;}
+.email_detail .pay_mode_li {
+	background:white;
+	padding-left:12px;
+	box-sizing: border-box;
+}
+.email_detail .pay_mode_li_box{
+	font-size:14px;
+	
+	height:50px;
+	line-height:50px;
+}
+.email_detail .pay_mode_li .pay_mode{
+	padding-right:10px;
+}
+.email_detail .carry_info {
+	margin-bottom: 10px;
+}
+.email_detail .receipt_info{
+	height:40px;
+	font-size: 14px;
+	width: 100%;
+	line-height: 50px;
+	box-sizing: border-box;
+	padding: 0 12px;
+	background: white;
+}
+.email_detail .fold_li {
+	width: 100%;
+	box-sizing: border-box;
+	padding: 0 12px 10px 12px;
+	position: relative;
+	background: white;
+	margin-bottom: 10px;
+}
+
+.email_detail .unit_name {
+	width: 100%;
+	height: 24px;
+	line-height: 24px;
+	font-size: 12px;
+	color: #77787d;
+}
+
+.email_detail .fold {
+	height: 8px;
+	width: 15px;
+	position: absolute;
+	top: 8px;
+	right: 12px;
+	background: url(../imgs/icon2.png) 0 -50px no-repeat;
+    background-size: 30px 150px;
+}
+
+.email_detail .fold i {
+	font-size: 12px;
+}
+
+.email_detail .fold_li ul li {
+	font-size: 12px;
+	width: 100%;
+	height: 24px;
+	line-height: 24px;
+	color: #77787d;
+}
+
+.email_detail .shop_cost {
+	width: 100%;
+	background: white;
+	box-sizing: border-box;
+	padding:8px 0 0 15px;
+}
+
+.email_detail .shop_cost ul li {
+	font-size: 14px;
+	width: 100%;
+	height: 30px;
+	background: white;
+	box-sizing: border-box;
+	padding: 0 15px 0 0;
+}
+
+.email_detail .shop_number,
+.email_detail .fare,
+.email_detail .serve {
+	float: right;
+	color: #f73132;
+}
+
+.email_detail .real_money_box {
+	width: 100%;
+	height: 30px;
+	background: white;
+}
+
+.email_detail .rel_money {
+	font-size: 16px;
+	height: 30px;
+	line-height: 40px;
+	float: right;
+}
+
+.email_detail .money_number {
+	color: #f73132;
+	padding-right: 15px;
+}
+
+.email_detail .order_time_box {
+	font-size: 12px;
+	width: 100%;
+	height: 30px;
+	box-sizing: border-box;
+	color: #75787d;
+	background: white;
+}
+
+.email_detail .order_time {
+	height: 30px;
+	line-height: 20px;
+	float: right;
+}
+
+.email_detail .order_time .day {
+	padding-right: 15px;
+}
+
+.email_detail .again_shop_box {
+	width: 100%;
+	height: 50px;
+}
+
+.email_detail .again_shop {
+	width: 70px;
+	height: 35px;
+	border: none;
+	background: #f8f8f8;
+}
+
+.email_detail .again_shop_a {
+	display: block;
+	font-size: 14px;
+	text-align: center;
+	line-height: 25px;
+	float: right;
+	width: 70px;
+	height: 35px;
+	border: 1px solid #252527;
+	outline: none;
+	background: #f8f8f8;
+	margin: 10px 10px 0 0;
+	border-radius: 3px;
+}
+.email_detail .progress>ul>li:last-child .r .ab:after{
+	width:0;
+	height:0;
+}
+
+
+.email_detail .some_function{
+	width:100%;
+	height:55px;
+	
+}
+.email_detail .some_function_ul{
+	width:100%;
+	height:55px;
+	overflow: hidden;
+}
+.email_detail .some_function_ul li{
+	float:right;
+}
+.email_detail .some_function_ul li a{
+	display: block;
+	width:70px;
+	height:35px;
+	font-size:13px;
+	color:#28282a;
+	line-height:35px;
+	text-align:center;
+	border:1px solid #242426;
+	border-radius:3px;
+	margin:9px 6px 0 0 ;
+}
+
+
+
+
+.email_detail .package_title{
+	font-size:14px;
+	width:100%;
+	height:50px;
+	line-height:50px;
+	color:#121214;
+	text-indent:15px;
+}
+.email_detail .package_time{
+	font-size:12px;
+	color:#818189;
+}
+.email_detail .pay_mode_li,.email_detail .carry_info,.email_detail .receipt_info,.email_detail .unit_order,.email_detail .point,.email_detail .shop_cost li,.email_detail .del_title{
+	color: #595959;
+}
+.email_detail .pay_mode,.email_detail .carry_info .day,.email_detail .carry_mode,.email_detail .add_receipt,.email_detail .unit_order span,.email_detail .point span{
+	color: #000000;
+}
+.email_detail .del_title{
+	font-size: 14px;
+	padding-left: 12px;
+	line-height: 40px;
+	height: 40px;
+}
+
+.email_detail .refuse_mask{
+	width:100%;
+	height:100%;
+	background:rgba(0,0,0,0.5);
+	position: fixed;
+	top:0;
+	left:0;
+	display: none;
+	z-index:101;
+}
+.email_detail .refuse_window{
+	width:80%;
+	height:230px;
+	background:white;
+	position: absolute;
+	top:33%;
+	left:10%;
+	z-index:102;
+	display: none;
+}
+.email_detail .cc{
+	width:20px;
+	height:20px;
+	background:url(../imgs/icon.png) -280px -233px no-repeat;
+	background-size:500px 667px;
+	position: absolute;
+	top:19px;
+	right:10px;
+}
+.email_detail .refuse_title{
+	font-size:14px;
+	width:100%;
+	height:50px;
+	text-align:center;
+	line-height:50px;
+	color:#797a7c;
+}
+.email_detail .refuse_box1,.exam .refuse_box2{
+	width:100%;
+	height:100px;
+}
+.email_detail .refuse_window textarea{
+	width:100%;
+	height:80px;
+	box-sizing: border-box;
+	padding:10px 10px;
+	border:none;
+	outline: none;
+	display: block;
+	resize: none;
+}
+.email_detail .refuse_submit_box{
+	width:100%;
+	height:60px;
+	padding-top:20px;
+}
+.email_detail .refuse_submit{
+	width:100px;
+	height:40px;
+	font-size:14px;
+	line-height:40px;
+	color:white;
+	text-align:center;
+	background:#f52f2c;
+	border-radius:3px;
+	margin:0 auto;
+}
+
+
+
+

@@ -1,0 +1,169 @@
+
+.receipt{
+	width:100%;
+	height:100%;
+	background:#f1f2f6;
+	position:relative;
+}
+.receipt_head{
+	width:100%;
+	height:45px;
+	position:absolute;
+	top:0;
+	left:0;
+	background:white;
+}
+.receipt_body{
+	width:100%;
+	height:100%;
+	box-sizing:border-box;
+	padding:45px 0 60px 0;
+}
+.receipt_info_wrapper{
+	height: 100%;
+	position:relative;
+	overflow: hidden;
+}
+.receipt_body_box{
+	width:100%;
+}
+.receipt_foot{
+	width:100%;
+	height:60px;
+	position:fixed;
+	bottom: 0;
+	left:0;
+	box-sizing:border-box;
+	background: #F1F2F6;
+	padding-top: 10px;
+}
+.receipt_foot .save{
+	width:100%;
+	height:40px;
+	background:#f52f2c;
+	text-align:center;
+	line-height:40px;
+	color:white;
+	
+}
+/*------head--------*/
+.receipt_back,.receipt_title{
+	float:left;
+}
+.receipt_back{
+	width:30%;
+	height:45px;
+	line-height:45px;
+	box-sizing:border-box;
+	padding-left:10px;
+}
+.receipt_title{
+	font-size:16px;
+	width:40%;
+	height:45px;
+	line-height:45px;
+	color:#3f464c;
+	text-align:center;
+}
+.receipt_mode{
+	width:100%;
+	height:100px;
+	background:white;
+	box-sizing:border-box;
+	padding-left:15px;
+	margin-bottom: 10px;
+}
+.receipt .mode_title{
+	font-size:15px;
+	width:100%;
+	height:45px;
+	line-height:45px;
+}
+.receipt .mode_sel{
+	overflow: hidden;
+}
+.receipt .mode_sel li{
+	font-size:12px;
+	text-align:center;
+	padding:10px;
+	height:14px;
+	line-height:14px;
+	border-radius:3px;
+	border:1px solid #9b9b9b;
+	float: left;
+	margin-right:10px;
+}
+.receipt .mode_sel li:first-child{
+	border:1px solid #f72e1a;
+	color:#f72e1a;
+}
+.receipt_foot_box{
+	width:100px;
+	height:40px;
+	margin:0 auto;
+	background:#f52f2c;
+	text-align:center;
+	line-height:40px;
+	border-radius:3px;
+	color:white;
+}
+.receipt .common{
+	width:100%;
+	box-sizing:border-box;
+	padding:15px 15px 0 15px;
+	background:white;
+}
+.receipt .common_title{
+	font-size:15px;
+	height:30px;
+}
+.receipt .common_content input{
+	margin-bottom: 10px;
+	width:100%;
+	height:40px;
+	background:#f1f2f6;
+	border:none;
+	outline:none;
+	box-sizing:border-box;
+	font-size: 14px;
+	line-height: 14px;
+}
+.receipt .common_content input::-webkit-input-placeholder{vertical-align: middle;}
+.receipt .common_content input{
+	text-indent:10px;
+}
+.receipt .appreciation{
+	width:100%;
+	box-sizing:border-box;
+	background:white;
+	padding:15px 0 0 15px;
+}
+.receipt .appre_title{
+	font-size:15px;
+	height:30px;
+}
+.receipt .appre_ul li{
+	font-size:14px;	
+	height:50px;
+	line-height:50px;
+	width:100%;
+	box-sizing:border-box;
+	color: #626262;
+}
+.receipt .appre_ul li input{
+	width:75%;
+	height:50px;
+	border:none;
+	outline:none;
+	float: left;
+	font-size: 14px;
+}
+.receipt .appre_ul li span{
+	float: left;
+}
+.receipt .appre_ul li:last-child{
+	border-bottom:none;
+}
+.receipt .appre_ul li:nth-child(2)  input{
+	width:65%;
+}

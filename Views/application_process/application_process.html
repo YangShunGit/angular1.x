@@ -1,0 +1,109 @@
+<div class="process">
+	<div class="process_head ab">
+		<div class="process_left m_l" ng-click="myBack()"><i class="iconfont icon-back"></i></div>
+		<div class="process_title m_m">申请售后服务</div>
+		<div class="process_right m_r" ng-click="change_nav()"><i class="iconfont icon-shenglvehao"></i></div>
+	</div>
+	<!--youshangjiao-->
+
+	<ysj></ysj>
+
+	<div class="process_body">
+		<div class="process_wrapper">
+			<div class="process_body_box">
+				<div class="up_box">
+					<div class="space1"></div>
+					<ul class="shop_list_ul">
+						<li class="shop_list_li" ng-repeat="item in details">
+							<div class="shop_pic bl ar">
+								<div class="bt ab" style="height:70px;width:70px;"><img ng-src="{{item.smallurl}}" alt="" ng-click="getData($event)" eid="{{item.eid}}" itemid="{{item.itemid}}" colorid="{{item.colorid}}" sizeid="{{item.sizeid}}" onerror="this.src='imgs/default2.jpg'" /></div>
+							</div>
+							<div class="shop_info">
+								<div class="shop_title">{{item.itemname}}</div>
+								<div class="shop_price">
+									<span class="shop_price">价格：￥{{item.price}}</span>
+									<div class="del_add">
+										<div class="del" data-index="{{$index}}"><i class="iconfont icon-del" ng-click="del($event)" ng-class="{true:'undertint',false:'original'}[{{item.orderqty}}==0]"></i>
+										</div>
+										<div class="count"><input type="tel" value="{{item.orderqty}}" data-index="{{$index}}" /></div>
+										<div class="add" data-index="{{$index}}"><i class="iconfont icon-add" ng-click="add($event)"></i></div>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<div class="space2"></div>
+					<div class="service_type">
+						<h3 class="type_title title">服务类型</h3>
+						<ul class="type_ul">
+							<li ng-click="type_sel($event)" class="service_type_li" data-index="1">退货</li>
+							<li ng-click="type_sel($event)" class="service_type_li" data-index="0">换货</li>
+
+						</ul>
+					</div>
+					<div class="space2"></div>
+					<div class="appReason">
+						<div class="reason_title">申请理由</div>
+						<div class="reason_content">请选择理由</div>
+						<div class="reason_sel"><i class="iconfont icon-more"></i></div>
+					</div>
+					<div class="space2"></div>
+				</div>
+				<div class="problem_describe">
+					<div class="word_count"><span>{{font_count.length}}</span>/500</div>
+					<h3 class="describe_title title">问题描述</h3>
+					<textarea name="" class="describe_content" cols="30" rows="10" maxlength="500" placeholder="请您在此描述详细问题" ng-model="font_count"></textarea>
+				</div>
+				<div class="space2"></div>
+				<div class="upload_pic">
+					<h3 class="upload_title title">上传照片</h3>
+					<ul class="pic_img">
+						<li id="pic_li">
+							<div class="delete" ng-click="del_pic($event)"></div>
+							<img src="" alt="" class="is_img"/>
+						</li>
+						<li class="upload_box" id="upload">
+							<img src="imgs/upload_pic.png" alt="" class="is_img"/>
+							<input type="file" name="fileToUpload" id="fileToUpload" onchange="uploadBtnChange()" style="opacity: 0;z-index: 999;"/> <br />
+				            <input type="text" name="compressValue" id="compressValue" style="display:none;" /><br/>
+				            <!--<input type="button" id='uploadBtn' value="上传" /><br/>-->
+
+						</li>
+					</ul>
+					<div>
+
+					</div>
+
+					<div class="upload_remark">为更好地为您解决问题，请您提供图片。最多5张，每张不超过5兆，支持JPG、BMP、PNG</div>
+				</div>
+				<div class="next_box">
+					<div class="next">下一步</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<div class="reason_list">
+		<div class="reason_wrapper">
+			<div class="reason_iscroll">
+				<h5 class="ab">申请理由</h5>
+				<div class="reasonCancel"></div>
+				<ul>
+					<li class="ab">商品质量有问题(需上传照片) <span></span> </li>
+					<li class="ab">商品与描述不符(需要上传照片)<span></span></li>
+					<li class="ab">商品未收到<span></span></li>
+					<li class="ab">不满配送时间或配送人员<span></span></li>
+					<li class="ab">无理由退货<span></span></li>
+					<li class="ab">商品有破损(需要上传照片)<span></span></li>
+					<li class="ab">包装不完整<span></span></li>
+					<li class="ab">其他原因<span></span></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="process_foot"></div>
+	<prompt></prompt>
+	<mask></mask>
+	<loading></loading>
+	<magnifier></magnifier>
+</div>

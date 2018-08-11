@@ -1,0 +1,62 @@
+<div class="register1">
+	<div class="register1_head ab">
+		<div class="register1_back">
+			<a href=""><i class="iconfont icon-back" ng-click="myBack()"></i><span ng-click="myClose()">关闭</span></a>
+		</div>
+		<div class="register1_title">填写企业信息</div>
+	</div>
+	<div class="register1_body">
+		<div class="register1_wrapper">
+			<div class="register1_iscroll">
+				<div class="content">
+					<div class="user_box ab bt">
+		
+						<span class="user_title">公司名称 :</span>
+						<input type="text" placeholder="请填写营业执照上的公司名称" class="set_input company_name" />
+						<div class="empty" ng-click="clear_value($event)"><i class="iconfont icon-shanchu-copy"></i></div>
+					</div>
+					<div class="places_box ab bt" ng-click="store_address()">
+						
+							<span class="places_title">公司所在地 :</span>
+							<input type="text" placeholder="请选择公司地址" class="set_input company_place" readonly="readonly" value="{{all_address.receiverstatename}}{{all_address.receivercityname}}{{all_address.receiverdistrictname}}"/>
+							<div class="selIcon"><i class="iconfont icon-more"></i></div>
+						
+					</div>
+					<div class="address_box ab bt">
+						<span class="address_title">详细地址 :</span>
+						<input type="text" placeholder="详细地址" class="set_input company_more_address" />
+						<div class="empty" ng-click="clear_value($event)"><i class="iconfont icon-shanchu-copy"></i></div>
+					</div>
+					<div class="person_box ab bt">
+						<span class="person_title">联系人姓名 :</span>
+						<input type="text" placeholder="姓名" class="set_input link_man" />
+						<div class="empty" ng-click="clear_value($event)"><i class="iconfont icon-shanchu-copy"></i></div>
+					</div>
+					<div class="mobile_box ab bt">
+						<span class="mobile_title">联系人手机 :</span>
+						<input type="text" placeholder="手机号码" class="set_input link_number" />
+						<div class="empty" ng-click="clear_value($event)"><i class="iconfont icon-shanchu-copy"></i></div>
+					</div>
+					<div class="email_box ab bt">
+						<span class="email_title">邮箱 :</span>
+						<input type="text" placeholder="请填写邮箱号" class="set_input link_email"/>
+						<div class="empty" ng-click="clear_value($event)"><i class="iconfont icon-shanchu-copy"></i></div>
+					</div>
+					<div class="tel_box ab bt">
+						<span class="tel_title">固定电话 :</span>
+						<input type="text" placeholder="可不填" class="set_input telephone" />
+						<div class="empty" ng-click="clear_value($event)"><i class="iconfont icon-shanchu-copy"></i></div>
+					</div>
+					
+				</div>
+				<div class="next">
+					<input type="button" value="下一步" class="next_button" ng-click="company_sub()"/>
+				</div>
+			</div>
+		</div>
+	</div>
+		
+	
+	<place></place>
+    <div class="tips" style="display: none;"></div>
+</div>

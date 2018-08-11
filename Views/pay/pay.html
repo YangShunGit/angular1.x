@@ -1,0 +1,25 @@
+<div class="pay">
+	<div class="pay_head ab">
+		<div class="pay_back m_l" ng-click="myBack()">
+			<i class="iconfont icon-back"></i>
+		</div>
+		<div class="pay_title m_m">支付方式</div>
+	</div>
+	<div class="pay_body">
+		<div class="pay_body_box">
+			<div class="pay_mode">
+				<div class="mode_title">
+					<i class="iconfont icon-zhifu"></i>支付方式
+				</div>
+				<ul class="mode_sel clearfix">
+					<li ng-click="border($event)" class="date" ng-repeat="item in paymodes" paymodeid="{{item.paymodeid}}">{{item.paymodename}}</li>
+				</ul>
+				<div class="tips"></div>
+			</div>
+		</div>
+	</div>
+	<div class="pay_foot">
+		<div class="pay_foot_box">确定</div>
+	</div>
+</div>
+

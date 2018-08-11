@@ -1,0 +1,42 @@
+<div class="receiverAddress">
+	<div class="receiver_head ab">
+		<div class="receiver_back m_l" ng-click="myBack()">
+			<i class="iconfont icon-back"></i>
+		</div>
+		<div class="receiver_title m_m">收货人信息</div>
+		<div class="receiver_right">
+			<searchcomponent></searchcomponent>
+		</div>
+	</div>
+	<mask></mask>
+	<div class="receiver_body">
+		<div class="receiver_body_box">
+			<ul>
+				<li id="receiver_li">
+					<div class="cargo_receiver">
+						<div class="info_box">
+							<div class="receiver_info">
+								<div class="default_sel"></div>
+								<div class="info_place"></div>
+								<div class="info_name"></div>
+								<div class="info_phone"></div>
+								<div class="info_tel"></div>
+							</div>
+							<div class="receiver_address"><div class="info_default">默认</div><span class="fullAddress"></span></div>
+						</div>
+							<div class="cargo_receiver_sel bl"><i class="iconfont icon-bianji2" ng-click="_addressEdit($event)"></i></div>
+					</div>
+				</li>
+			</ul>
+			<ifempty></ifempty>
+		</div>
+	</div>
+	<div class="receiver_foot">
+		<div class="new_address">
+			<a href="" class="new_address" ui-sref="new_receiver">
+			<div class="new_icon"></div><span>新建地址</span>
+		</a>
+		</div>
+	</div>
+	<loading></loading>
+</div>

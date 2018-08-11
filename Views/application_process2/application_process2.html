@@ -1,0 +1,53 @@
+<div class="process2">
+	<div class="process2_head ab">
+		<div class="process2_left m_l" ng-click="myBack()"><i class="iconfont icon-back"></i></div>
+		<div class="process2_title m_m">商品退回方式</div>
+		<div class="process2_right m_r" ng-click="change_nav()"><i class="iconfont icon-shenglvehao"></i></div>
+	</div>
+	<!--youshangjiao-->
+	<ysj></ysj>
+	<div class="process2_body">
+		<div class="process2_wrapper">
+			<div class="process2_body_box">
+				<div class="service_type">
+					<h3 class="type_title title">服务类型</h3>
+					<ul class="type_ul">
+						<li ng-click="type_sel($event)" class="service_type_li" id="go_pickup">上门取件</li>
+						<li ng-click="type_sel($event)" class="service_type_li" id="back_pickup">快递寄回</li>
+					</ul>
+					<div class="date_sel">取件时间：<span class="date">{{is_date}}</span><i></i></div>
+				</div>
+				<div class="contact_info">
+					<div class="contact_people bt"><span>联系人：</span><input type="text" class="people_name" readonly="readonly" value="{{receiver.receivername}}"/></div>
+					<div class="contact_phone bt"><span>联系电话：</span><input type="text" class="phone_number" readonly="readonly" value="{{number}}"/></div>
+				</div> 
+				<div class="point2">提交退换货后，售后专员可能与您电话沟通，请保持手机畅通</div>
+				<div class="next_box">
+					<div class="next">提交</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="process2_foot"></div>
+	<place></place>
+	<mask></mask>
+	<div class="carry_flex">
+		<div class="chacha"><i class="iconfont icon-chacha"></i></div>
+		<h5 class="carry_flex_head ab">取件时间</h5>
+		<div class="carry_flex_body">
+			<div class="week_box">
+			<ul class="myWeek">
+				<li ng-repeat="item in myDate" data-index="{{$index}}"> 
+					{{item}}
+					<div class="is_sel"></div>
+				</li>
+			</ul>
+			</div>
+			
+		</div>
+	</div>
+	<prompt></prompt>
+	<loading></loading>
+</div>
+
+

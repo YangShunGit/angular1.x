@@ -1,0 +1,31 @@
+<div class="login">
+	
+	<div class="login_head ab">
+		<div class="login_back m_l"></div>
+		<div class="login_title m_m">登录</div>
+	</div>
+	<div class="login_form">
+		<form action="/passport/login" method = 'post'  id="formid">
+			<div class="user_id ab" >
+				<span>账号</span><input type="text" name="userno" placeholder="请输入账号"  id="opid" class="user"/>
+			</div>
+			<div class="user_password ab">
+				<span>密码</span><input type="password" name="userpwd" placeholder="请输入6-16位密码" class="pwd"/>
+			</div>
+				<input type="button" value="登录" class="btn_login" />
+				<input type="hidden" name="openid" id="openid"/>
+		</form>
+		<form action="/passport/scanlogin" method = 'post' id="formId">
+			<input type="hidden" name="openid" id="openId"/>
+			<input type="hidden" name="authcode" id="authcode"/>
+		</form>
+	</div>
+	<div class="scanLoad_b">
+		<div class="scanLoad" ng-click="qrCode()">扫一扫登录</div>
+	</div>
+	<div class="other">
+		<div class="vip"><a href="" ui-sref="register1" class="vip">申请会员</a></div>
+		<div class="forget_password">忘记密码</div>
+	</div>
+	<loading></loading>
+</div>

@@ -1,0 +1,105 @@
+<div class="return">
+	<div class="return_head ab">
+		<div class="return_left m_l" ng-click="myBack()"><i class="iconfont icon-back"></i></div>
+		<div class="return_title m_m">售后服务</div>
+		<div class="return_right m_r" ng-click="change_nav()"><i class="iconfont icon-shenglvehao"></i></div>
+	</div>
+	<div class="return_nav ab">
+		<div class="return_apply"><span ng-click="color($event)" class="nav1">售后申请</span></div>
+		<div class="return_record"><span ng-click="color($event)" class="nav2">售后记录</span></div>
+	</div>
+	<!--youshangjiao-->
+	<ysj></ysj>
+	
+	<div class="return_body">
+		<div class="return_wrapper">
+			<div class="return_body_box">
+				<ul class="return_order_list">
+					<li id="return_order_li">
+						<div class="space2"></div>
+						<div class="order_number">
+							订单号：<span class="order_number_box"></span><span class="status"></span>
+						</div>
+						<div class="order_time_box_wrapper">
+						<div class="order_time_box ab">
+							下单时间：<span class="order_time"></span>&nbsp;<span class="order_hour"></span>
+						</div>
+						</div>
+						<ul class="shop_list">
+							<li>
+								<div class="shop_info_box">
+									<div class="pic btn ab"><div class="bl ar"><img data-original="" class="lazy"  src='imgs/default2.jpg'/></div></div>
+									<div class="pic_info">
+										<div class="title"></div>
+										<div class="count">数量：×<span></span></div>
+									</div>
+								</div>
+								
+								<div class="shop_info_box2">
+									<div class="swiper-container">
+										<div class="swiper-wrapper">
+											<div id="swiper-slide"><div  class="bl_ar"><div class="bt_ab"><img data-original="" class="lazy" src='imgs/default2.jpg'/></div></div></div>
+										</div>
+									</div>
+								</div>
+								
+								
+							</li>
+						</ul>
+						<div class="some_function">
+							<ul class="some_function_ul btn">
+								<li class="apply_service"><a href="">申请售后</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+				<ul class="return_progress_list">
+					<li id="return_progress_li">
+						<div class="space2"></div>
+						<div class="order_number_b">
+							<div class="order_number">
+								退单号：<span class="order_number_box"></span> <span class="status"></span>
+							</div>
+						</div>
+						<div class="order_time_box_wrapper">
+						<div class="order_time_box ab">
+							申请时间：<span class="order_time"></span>&nbsp;<span class="order_hour"></span>
+						</div>
+						</div>
+						<ul class="shop_list">
+							<li>
+								<div class="shop_info_box">
+									<div class="pic bt ab"><div class="bl ar"><img data-original="" class="lazy"  src='imgs/default2.jpg'/></div></div>
+									<div class="pic_info">
+										<div class="title"></div>
+										
+									</div>
+								</div>
+								<div class="shop_info_box2">
+									<div class="swiper-container">
+										<div class="swiper-wrapper">
+											<div id="swiper-slide"><img data-original="" class="lazy" src='imgs/default2.jpg'/></div>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<div class="some_function">
+							<ul class="some_function_ul btn">
+								<li class="cancel_apply"><a href="">取消售后</a></li>
+								<li class="apply_service"><a href="">再次申请</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+				<loadingmore></loadingmore>
+				<div class="bottom">没有更多了</div>
+				<ifempty></ifempty>
+			</div>
+		</div>
+	</div>
+	<prompt></prompt>
+	<confirm></confirm>	
+	<div class="return_foot"></div>
+	<loading></loading>
+</div>

@@ -1,0 +1,103 @@
+<div class="revise_order_box">
+	<div class="revise_order">
+	<div class="cart_head ab">
+		<div class="cart_left m_l" ng-click="myBack()"><i class="iconfont icon-back"></i></div>
+		<div class="cart_title">修改订单</div>
+	</div>
+	<div class="cart_body">
+		<div class="cart_wrapper">
+			<div class="cart_body_box">
+				<div class="space2"></div>
+				<div class="order_note_box"><p class="ab">订单号：{{order.billno}}</p></div>
+				<ul class="cart_list_ul">
+					<li class="list_li" ng-repeat="item in goods" eid="{{item.eid}}" itemid="{{item.itemid}}" colorid="{{item.colorid}}" sizeid="{{item.sizeid}}">
+						
+						
+						
+						<div class="li_pic bl ar">
+							<div class="bt ab" style="height:70px;width:70px;"><img ng-src="{{item.middleurl}}" alt="" eid="{{item.eid}}" itemid="{{item.itemid}}" colorid="{{item.colorid}}" sizeid="{{item.sizeid}}" onerror="this.src='imgs/default2.jpg'"/></div>
+						</div>
+						<div class="shop_info">
+							<div class="shop_info_box ab">
+								<div class="del_it" inx="{{item.inx}}" ng-click="goods_del($event)"></div>
+								<div class="li_title" eid="{{item.eid}}" itemid="{{item.itemid}}" colorid="{{item.colorid}}" sizeid="{{item.sizeid}}">{{item.itemname}}</div>
+								<div class="shop_standard">
+									<span class="shop_color">颜色：{{item.colorname}}</span>
+									<span class="shop_sta">规格：{{item.sizename}}</span>
+									<div class="shop_sign">{{item.goods_type}}</div>
+								</div>
+								
+								
+								<div class="li_price"><span class="small">¥</span>{{item.itprice.big_price}}.<span class="small">{{item.itprice.small_price}}</span></div>
+								<div class="li_add">
+									<div class="del"><i inx="{{item.inx}}" orderqty="{{item.orderqty}}" ng-click="shop_del($event)" ng-class="{true:'undertint',false:'original'}[{{item.orderqty}}==1]"  class="iconfont icon-del" 
+										></i></div>
+									
+									<div class="count_input"><input type="tel" value="{{item.orderqty}}"  inx="{{item.inx}}" min="1" ng-click="shop_click($event)" ng-keyup="shop_keyup($event)" ng-blur="shop_blur($event)"/></div>
+									<div class="add"><i ng-click="shop_add($event)" orderqty="{{item.orderqty}}"  inx="{{item.inx}}" ng-class="{true:'undertint',false:'original'}[{{item.orderqty}}==9999]" class="iconfont icon-add"></i></div>
+								
+								</div>
+							</div>
+						</div>
+						
+					</li>
+				</ul>
+				<div class="del_title_box"><p class="ab">删除商品列表</p> </div>
+				<ul class="del_list_ul">
+					<li class="list_li" ng-repeat="item in del_goods" eid="{{item.eid}}" itemid="{{item.itemid}}" colorid="{{item.colorid}}" sizeid="{{item.sizeid}}">
+						
+						
+						<div class="li_pic bl ar">
+							<div class="bt ab" style="height:70px;width:70px;"><img ng-src="{{item.middleurl}}" alt="" eid="{{item.eid}}" itemid="{{item.itemid}}" colorid="{{item.colorid}}" sizeid="{{item.sizeid}}" onerror="this.src='imgs/default2.jpg'"/></div>
+						</div>
+						<div class="shop_info">
+							<div class="shop_info_box ab">
+							<div class="rec_it" inx="{{item.inx}}" ng-click="goods_rec($event)"></div>
+							<div class="li_title" eid="{{item.eid}}" itemid="{{item.itemid}}" colorid="{{item.colorid}}" sizeid="{{item.sizeid}}">{{item.itemname}}</div>
+							<div class="shop_standard">
+								<span class="shop_color">颜色：{{item.colorname}}</span>
+								<span class="shop_sta">规格：{{item.sizename}}</span>
+								<div class="shop_sign">{{item.goods_type}}</div>
+							</div>
+							
+							
+							<div class="li_price"><span class="small">¥</span>{{item.itprice.big_price}}.<span class="small">{{item.itprice.small_price}}</span></div>
+							<div class="li_add">
+							
+								<div class="del"><i orderqty="{{item.orderqty}}" inx="{{item.inx}}" ng-click="shop_del($event)" ng-class="{true:'undertint',false:'original'}[{{item.orderqty}}==1]"  class="iconfont icon-del"></i></div>
+								
+								<div class="count_input"><input type="tel" value="{{item.orderqty}}"  inx="{{item.inx}}" min="1"/></div>
+								<div class="add"><i class="iconfont icon-add" orderqty="{{item.orderqty}}" ng-click="shop_add($event)"  inx="{{item.inx}}"></i></div>
+							
+							</div>
+						</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="cart_foot bt">
+		<div class="cart_foot_box1">
+			<div class="foot_left2">
+				<div class="up">合计:<span class="sum">￥{{totalfee}}</span></div>
+				<div class="down">(不含运费 )</div>
+			</div>
+			<div class="foot_right pass" ng-click="pass_submit()">通过提交</div>
+			<div class="foot_right session" ng-click="session_order()">暂存订单</div>
+		</div>
+		
+	</div>
+</div>
+	<div class="cart_prompt" style="display: none;">
+		<div class="pic"><img src="imgs/detail/cart_success.png"></div>
+		<div class="txt">收藏成功</div>
+	</div>
+	<div class="is_load" style="display: none;">
+		<div class="pic"><img src="imgs/loading.gif"></div>
+		<div class="txt">请求加载中</div>
+	</div>
+	<confirm></confirm>
+	<prompt></prompt>
+	<loading></loading>
+</div>

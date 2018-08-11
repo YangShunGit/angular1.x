@@ -1,0 +1,99 @@
+body .help_center {
+	background: #f0f2f5;
+	height: 100%;
+	overflow: hidden;
+}
+
+.help {
+	box-sizing: border-box;
+	height: 100%;
+	padding-top: 45px;
+}
+
+#help {
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+	margin-top: -45px;
+}
+
+.help .fl_l {
+	float: left;
+}
+
+.help .fl_r {
+	float: right
+}
+
+.help_center .navBar {
+	height: 45px;
+	line-height: 45px;
+	position: relative;
+	font-size: 18px;
+	color: #3C444B;
+	background: #FFFFFF;
+}
+.help .icon-shenglvehao{
+	font-size:20px;
+}
+
+.help_center .item {
+	font-size: 14px;
+	border-bottom: 1px solid #e3e2e5;
+}
+
+.help_center .item .title {
+	position: relative;
+	padding-left: 31px;
+	color: #8e8e93;
+	line-height: 33px;
+	font-weight: 600;
+}
+
+.help_center .item .title i {
+	position: absolute;
+	top: 8px;
+	left: 8px;
+	background: url(../imgs/icon.png) no-repeat -247px -370px;
+	background-size: 500px 667px;
+	width: 18px;
+	height: 18px;
+}
+
+.help_center .od .title i {
+	background: url(../imgs/icon.png) no-repeat -287px -370px;
+	background-size: 500px 667px;
+}
+
+.help_center .eef .title i {
+	background: url(../imgs/icon.png) no-repeat -327px -370px;
+	background-size: 500px 667px;
+}
+
+.help_center .ship .title i {
+	background: url(../imgs/icon.png) no-repeat -370px -370px;
+	background-size: 500px 667px;
+}
+
+.help_center .item ul {
+	background: #FFFFFF;
+	color: #3c444b;
+}
+
+.help_center .item li {
+	margin-left: 12px;
+	line-height: 40px;
+	border-bottom: 1px solid #e3e2e5;
+}
+
+
+/*.help_center .item li.last {
+	border: none;
+}*/
+
+.help_center .item li i {
+	position: absolute;
+	right: 12px;
+	color: #bfbfbf;
+}
+
